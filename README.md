@@ -12,6 +12,30 @@
 
 ## Table of content
 
+- [Tradeoff table](#tradeoff-table)
+- [User experience -UX-](#user-experience--ux-)
+  - [User stories](#user-stories)
+    - [As the site owner](#as-the-site-owner)
+    - [As a new user](#as-a-new-user)
+    - [As a returning user](#as-a-returning-user)
+  - [Design](#design)
+    - [Colour scheme](#colour-scheme)
+  - [Wireframes](#wireframes)
+- [Features](#features)
+  - [Features implemented](#features-implemented)
+  - [Future features](#future-features)
+  - [Features changed](#features-changed)
+- [Technologies](#technologies)
+  - [Languages](#languages)
+  - [Integrations](#integrations)
+  - [Version control- workspace and repository storage](#version-control--workspace-and-repository-storage)
+  - [Other technologies](#other-technologies)
+- [Testing](#testing)
+- [Deployment](#deployment)
+  - [Deploy to Heroku](#deploy-to-heroku)
+  - [Heroku](#heroku)
+  - [Local development](#local-development)
+- [Credits](#credits)
 
 
 ---
@@ -54,7 +78,7 @@
 
 ---
 
-![Color schema]()
+![Colour scheme]()
 
 
 
