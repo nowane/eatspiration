@@ -1,8 +1,13 @@
 # Eatspiration | Data Centric Project 
 
-## Project overview
+## Project Overview
 
+This is the third milestone project in obtaining a **Full-Stack Web Development Diploma** from  **[Code Institute](https://codeinstitute.net/)**. The purpose of this project is building a full-stack site that allows users to manage a common dataset about a particular domain. The required main technologies for this project are **HTML**, **CSS**, **Javascript**, **Python**, **Flask** and **MongoDB**. To improve the overall quality and user experience of this website other technologies were used as well. The full list of technologies used can be found in the technologies section of this document. 
+Eatspiration is a recipe sharing website designed to help users find and share their own recipes with others.
 
+**Please note: To open any links in this document in a new browser tab, please press CTRL + Click.**
+
+View live website [here](https://eatspiration.herokuapp.com/).
 
 ---
 
