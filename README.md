@@ -1,6 +1,6 @@
 # Eatspiration | Data Centric Project 
 
-## Project Overview
+## Project overview
 
 
 
@@ -10,55 +10,55 @@
 
 ---
 
-## Table of Content
+## Table of content
 
 
 
 ---
 
-## Tradeoff Table
+## Tradeoff table
 	
 
 
-[Back to Table of Content](#Table-of-Content) 
+[Back to table of content](#Table-of-Content) 
 
 ---
 
 ## User Experience -UX-
 
-  ### User Stories
+  ### User stories
 
-  #### As the Site Owner
-
-
-
-  #### As a New User
+  #### As the site owner
 
 
 
-  #### As a Returning User
+  #### As a new user
 
 
 
-[Back to Table of Content](#Table-of-Content)
+  #### As a returning user
+
+
+
+[Back to table of content](#Table-of-Content)
 
 ---
 
 ### Design
 
-  #### Colour Scheme
+  #### Colour scheme
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
-![Color Schema]()
+![Color schema]()
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
@@ -66,34 +66,34 @@
 
 Added [Wireframes]() for desktop, tablet and mobile.
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
 ## Features
 
-### Features Implemented
+### Features implemented
 
 
 
-[Back to Table of Content](#table-of-content)
-
----
-
-### Future Features 
-
-
-
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
-### Features Changed
+### Future features 
+
+
+
+[Back to table of content](#table-of-content)
+
+---
+
+### Features changed
 
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
@@ -111,57 +111,57 @@ Added [Wireframes]() for desktop, tablet and mobile.
 
 ---
 
-  ### Version Control- Workspace and Repository Storage
+  ### Version control- workspace and repository storage
 
 
 
 ---
 
-  ### Other Technologies
+  ### Other technologies
 
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
 ## Testing
 
-This [testing document]()  contains all testing,
+This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING.md)  contains all testing,
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
 ## Deployment
 
-### Deployment to Github
+### Deployment to GitHub
 
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
-### Run Code Locally
+### Run code locally
 
 
 
-  #### Forking Local Repository
+  #### Forking local repository
 
 
 
-  [Back to Table of Content](#table-of-content)
+  [Back to table of content](#table-of-content)
 
   ---
 
-  #### Cloning Local Repository
+  #### Cloning local repository
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
 
 ---
 
@@ -169,4 +169,4 @@ This [testing document]()  contains all testing,
 
 
 
-[Back to Table of Content](#table-of-content)
+[Back to table of content](#table-of-content)
