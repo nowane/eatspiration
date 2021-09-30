@@ -38,8 +38,21 @@
 ---
 
 ## Tradeoff table
-	
 
+<details>
+<summary><b>Show table</b></summary>
+
+Opportunity/Problem | Importance | Viability/Feasibility
+--------------------|------------|-----------
+The website being aesthetically pleasing | 5 | 5
+User being able to log in/out to be able to use CRUD functionality | 5 | 5
+An admin user being able to edit/delete any users data | 5 | 5
+User being able to browse their own recipes as well as recipes added by other users | 5 | 5
+User being able to search for recipes based on various searching criteria | 5 | 5
+User being able to rate other recipes | 5 | 3
+User can contact site owner/admin | 3 | 5
+
+</details>
 
 [Back to table of content](#Table-of-Content) 
 
