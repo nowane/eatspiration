@@ -15,9 +15,6 @@
 - [Tradeoff table](#tradeoff-table)
 - [User experience -UX-](#user-experience--ux-)
   - [User stories](#user-stories)
-    - [As the site owner](#as-the-site-owner)
-    - [As a new user](#as-a-new-user)
-    - [As a returning user](#as-a-returning-user)
   - [Design](#design)
     - [Colour scheme](#colour-scheme)
   - [Wireframes](#wireframes)
@@ -52,17 +49,37 @@
 
   ### User stories
 
-  #### As the site owner
+<details>
+<summary><b>As the site owner/admin</b></summary>
 
+- As the owner/admin of the website, I want to be able to edit content to ensure it is conform the rules of the website.
+- As the owner/admin of the website, I want the users of the website to have a positive user experience so that the community grows.
+- As the owner/admin of the website, I want the users to be able to easily find, add, edit and be able to delete (their own) recipes to increase the number of recipes that are shared between users of the website.
 
+</details>
 
-  #### As a new user
+<details>
+<summary><b>As a new user</b></summary>
 
+- As a new user, I want the website to be easily accessible from browsers of mobile devices as well as desktop.
+- As a new user, I want to be able to easily see how to use the website, so I can start using the website effortlessly.
+- As a new user, I want to be able to register with the site so that I can upload new recipes.
+- As a newly registered user, I want to be able to log into my account so that I can access my recipes.
 
+</details>
 
-  #### As a returning user
+<details>
+<summary><b>As a returning user</b></summary>
 
+- As a returning user, I want to be able to search recipes by name so that I can find specific dishes.
+- As a returning user, I want to be able to search recipes on cuisine type.
+- As a returning user, I want to be able to be able to filter recipes based on cooking time.
+- As a returning user, I want to be able to save my favourite recipes so that I can quickly find them again in the future.
+- As a returning user, I want to be able to easily add, edit or delete my own recipes.
+- As a returning user, I want feedback from the website when I add, edit or delete my recipes to show that my input is successfully processed.
+- As a returning user, I want to be able to log out of the site when I am done using it.
 
+</details>
 
 [Back to table of content](#Table-of-Content)
 
