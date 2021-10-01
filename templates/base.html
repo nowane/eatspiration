@@ -25,7 +25,30 @@
 
 <body>
     <header>
-        <h1>Eatspiration</h1>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo left">Eatspiration</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><h3 class="center-align">Eatspiration</h3></li>
+            <hr>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+
+
+
     </header>
 
     {% block content %}
