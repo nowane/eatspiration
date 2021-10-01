@@ -157,9 +157,20 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ## Technologies
 
-  ### Languages
+<details>
+<summary><b>Languages</b></summary>
 
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style and colour HTML as well as dynamic elements.
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) - Used to structure the individual page(s) of the website.
+
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Used to create and manipulate the dynamic elements of the website.
+
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Used to generate HTML from templates.
+
+- [Python](https://www.python.org/) - Used for the backend server and to run queries to the database.
+
+</details>
 
 ---
 <details>
