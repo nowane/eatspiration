@@ -29,10 +29,6 @@ View live website [here](https://eatspiration.herokuapp.com/).
   - [Future features](#future-features)
   - [Features changed](#features-changed)
 - [Technologies](#technologies)
-  - [Languages](#languages)
-  - [Integrations](#integrations)
-  - [Version control- workspace and repository storage](#version-control--workspace-and-repository-storage)
-  - [Other technologies](#other-technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
   - [Deploy to Heroku](#deploy-to-heroku)
@@ -166,10 +162,15 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 
 ---
+<details>
+<summary><b>Libraries</b></summary>
 
-  ### Integrations
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used micro-web framework to simplify web server tasks.
+- [JQuery](https://jquery.com/) - Used to simplify DOM manipulation.
+- [Materialize](https://materializecss.com/) - Used framework for this project.
+- [Werkzeug](https://palletsprojects.com/p/werkzeug/) - Used the Werkzeug WSGI library to manage the Web Server Gateway Interface and related tasks.
 
-
+</details>
 
 ---
 
