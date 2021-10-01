@@ -123,7 +123,7 @@ User can contact site owner/admin | 3 | 5
 
 ### Wireframes
 
-Added [Wireframes]() for desktop, tablet and mobile.
+Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wireframes/wireframes-ms3.pdf) for desktop, tablet and mobile.
 
 [Back to table of content](#table-of-content)
 
