@@ -179,10 +179,14 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ---
 
-  ### Other technologies
+<details>
+<summary><b>Other technologies</b></summary>
 
+- [Balsamiq](https://balsamiq.com/) - Used to create wireframes for the UX stage of the project.
+- [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - Used throughout building the project testing responsiveness and debugging.
+- [Slack](https://slack.com/intl/en-nl/) - Used to look up answers to all kind of questions.
 
-
+</details>
 
 [Back to table of content](#table-of-content)
 
