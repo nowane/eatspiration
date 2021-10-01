@@ -173,9 +173,15 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ---
 
-  ### Version control- workspace and repository storage
+<details>
+<summary><b>Version control, workspace, repository storage and deployment</b></summary>
 
+- [Git](https://git-scm.com/) - Version control software used to commit and push code to the GitHub repository where the source code is stored.
+- [Gitpod](https://www.gitpod.io/) - Main workspace IDE (Integrated Development Environment).
+- [GitHub](https://github.com/) - Used to store the project repository and deploy the website via github pages.
+- [Heroku](https://www.heroku.com/platform) - Platform used to deploy this project.
 
+</details>
 
 ---
 
@@ -205,7 +211,7 @@ This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING
 ### Deploy to Heroku
 
 <details>
-<summary><b>Setup requirements:</b></summary>
+<summary><b>Setup requirements</b></summary>
 
 Make sure "requirements.txt" is always up to date.  
 Requirements.txt tells Heroku what resources are needed to run the app.
@@ -217,7 +223,7 @@ Requirements.txt tells Heroku what resources are needed to run the app.
 </details>
 
 <details>
-<summary><b>Setup Procfile:</b></summary>
+<summary><b>Setup Procfile</b></summary>
 
 Heroku looks for this Procfile to find out which file runs the app and how to run it.
 
