@@ -22,7 +22,8 @@ View live website [here](https://eatspiration.herokuapp.com/).
   - [User stories](#user-stories)
   - [Design](#design)
     - [Colour scheme](#colour-scheme)
-  - [Wireframes](#wireframes)
+    - [Typography](#typography)
+    - [Wireframes](#wireframes)
 - [Features](#features)
   - [Features implemented](#features-implemented)
   - [Future features](#future-features)
@@ -115,13 +116,15 @@ User can contact site owner/admin | 3 | 5
 
 ![Colour scheme]()
 
-
-
 [Back to table of content](#table-of-content)
 
 ---
 
-### Wireframes
+  #### Typography
+
+The headers are in Anton with Roboto as backup lettertype, while the body text is in Roboto. Anton was chosen for the headers because it is bold and clear, while Roboto is easy to read and widely used on the web. Sans-serif will be the the backup in case neither one loads.
+
+  #### Wireframes
 
 Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wireframes/wireframes-ms3.pdf) for desktop, tablet and mobile.
 
