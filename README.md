@@ -21,19 +21,11 @@ View live website [here](https://eatspiration.herokuapp.com/).
 - [User experience -UX-](#user-experience--ux-)
   - [User stories](#user-stories)
   - [Design](#design)
-    - [Colour scheme](#colour-scheme)
-    - [Typography](#typography)
-    - [Wireframes](#wireframes)
+    - [Database design](#database-design)
 - [Features](#features)
-  - [Features implemented](#features-implemented)
-  - [Future features](#future-features)
-  - [Features changed](#features-changed)
 - [Technologies](#technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
-  - [Deploy to Heroku](#deploy-to-heroku)
-  - [Heroku](#heroku)
-  - [Local development](#local-development)
 - [Credits](#credits)
 
 
@@ -134,6 +126,24 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 </details>
 
 [Back to table of content](#table-of-content)
+
+#### Database design
+
+<details>
+<summary><b>Database diagram</b></summary>
+
+
+
+</details>
+
+---
+
+<details>
+<summary><b>Database information</b></summary>
+
+
+
+</details>
 
 ---
 
