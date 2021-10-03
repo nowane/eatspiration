@@ -13,3 +13,13 @@ body h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     width: 100%;
 }
+
+/* Footer styling */
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-menu li {
+    display: inline-block;
+}
