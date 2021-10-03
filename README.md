@@ -347,6 +347,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits
 
+- Looked at this [Youtube video](https://www.google.com/search?q=How+to+add+line+divider+for+menu+item&rlz=1C1VDKB_nlNL944NL944&sxsrf=AOaemvIWM2JneOlrQ8TRwr-0b7OJBRtxbw%3A1633248622660&ei=bmVZYczYJ4WQkwXQnIXoDg&ved=0ahUKEwjMx-6f5a3zAhUFyKQKHVBOAe0Q4dUDCA4&uact=5&oq=How+to+add+line+divider+for+menu+item&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEBNKBAhBGABQijVYijVg0DZoAHABeACAAXeIAXeSAQMwLjGYAQCgAQKgAQHAAQE&sclient=gws-wiz#kpvalbx=_2G5ZYebFPILksAehqJOgAw22) which is about vertical menu dividers 
 
 
 [Back to table of content](#table-of-content)
