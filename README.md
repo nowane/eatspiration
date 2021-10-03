@@ -102,27 +102,32 @@ User can contact site owner/admin | 3 | 5
 
 ### Design
 
-  #### Colour scheme
+<details>
+<summary><b>Colour scheme</b></summary>
 
-
-
-[Back to table of content](#table-of-content)
-
----
-
-![Colour scheme]()
+![Colour scheme](https://github.com/nowane/eatspiration/blob/main/static/images/ms3colourpalette.png)
 
 [Back to table of content](#table-of-content)
 
+</details>
+
 ---
 
-  #### Typography
+<details>
+<summary><b>Typography</b></summary>
 
 The headers are in Anton with Roboto as backup lettertype, while the body text is in Roboto. Anton was chosen for the headers because it is bold and clear, while Roboto is easy to read and widely used on the web. Sans-serif will be the the backup in case neither one loads.
 
-  #### Wireframes
+</details>
+
+---
+
+<details>
+<summary><b>Wireframes</b></summary>
 
 Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wireframes/wireframes-ms3.pdf) for desktop, tablet and mobile.
+
+</details>
 
 [Back to table of content](#table-of-content)
 
