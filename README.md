@@ -73,6 +73,8 @@ User can contact site owner/admin | 3 | 5
 
 </details>
 
+---
+
 <details>
 <summary><b>As a new user</b></summary>
 
@@ -82,6 +84,8 @@ User can contact site owner/admin | 3 | 5
 - As a newly registered user, I want to be able to log into my account so that I can access my recipes.
 
 </details>
+
+---
 
 <details>
 <summary><b>As a returning user</b></summary>
@@ -135,26 +139,30 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ## Features
 
-### Features implemented
+<details>
+<summary><b>Features implemented</b></summary>
 
 
 
-[Back to table of content](#table-of-content)
-
----
-
-### Future features 
-
-
-
-[Back to table of content](#table-of-content)
+</details>
 
 ---
 
-### Features changed
+<details>
+<summary><b>Future features</b></summary>
 
 
 
+</details>
+
+---
+
+<details>
+<summary><b>Features changed</b></summary>
+
+
+
+</details>
 
 [Back to table of content](#table-of-content)
 
@@ -217,7 +225,12 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ## Testing
 
-This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING.md)  contains all testing,
+<details>
+<summary><b>Open tab</b></summary>
+
+This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING.md)  contains all testing.
+
+</details>
 
 [Back to table of content](#table-of-content)
 
@@ -239,6 +252,8 @@ Requirements.txt tells Heroku what resources are needed to run the app.
 
 </details>
 
+---
+
 <details>
 <summary><b>Setup Procfile</b></summary>
 
@@ -250,6 +265,8 @@ Heroku looks for this Procfile to find out which file runs the app and how to ru
 4.  Push the file to GitHub.
 
 </details>
+
+---
 
 ### Heroku
 
@@ -266,6 +283,8 @@ Heroku looks for this Procfile to find out which file runs the app and how to ru
 
 </details>
 
+---
+
 <details>
 <summary><b>Connecting to the GitHub repository</b></summary>
 
@@ -276,6 +295,8 @@ You can connect in different ways, like via the Heroku Command Line Interface as
 3.  Once it finds the repository, click connect, to connect to the repository.
 
 </details>
+
+---
 
 <details>
 <summary><b>Setup the Config Vars</b></summary>
@@ -297,6 +318,8 @@ Add the Key-Value pairs as follows, without quotes:
 
 </details>
 
+---
+
 <details>
 <summary><b>Automatic Deployment</b></summary>
 
@@ -310,6 +333,8 @@ Once the Config Vars has been entered you are ready for automatic deployment.
 The project is now deployed.
 
 </details>
+
+---
 
 ### Local development
 
@@ -325,6 +350,8 @@ You can make a copy of the GitHub Repository by "forking" the original repositor
 5. Once you're finished making changes, return to original repository and press "New Pull Request" to request your changes to be merged into the original project.
 
 </details>
+
+---
 
 <details>
 <summary><b>Making a Local Clone</b></summary>
@@ -352,7 +379,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits
 
+<details>
+<summary><b>Open tab</b></summary>
+
 - Looked at this [Youtube video](https://www.google.com/search?q=How+to+add+line+divider+for+menu+item&rlz=1C1VDKB_nlNL944NL944&sxsrf=AOaemvIWM2JneOlrQ8TRwr-0b7OJBRtxbw%3A1633248622660&ei=bmVZYczYJ4WQkwXQnIXoDg&ved=0ahUKEwjMx-6f5a3zAhUFyKQKHVBOAe0Q4dUDCA4&uact=5&oq=How+to+add+line+divider+for+menu+item&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEBNKBAhBGABQijVYijVg0DZoAHABeACAAXeIAXeSAQMwLjGYAQCgAQKgAQHAAQE&sclient=gws-wiz#kpvalbx=_2G5ZYebFPILksAehqJOgAw22) which is about vertical menu dividers 
 
+</details>
 
 [Back to table of content](#table-of-content)
