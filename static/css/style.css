@@ -37,4 +37,10 @@ body h1, h2, h3, h4, h5, h6 {
 .footer-menu a,
 .footer-links a {
     color: #fff;
+    display: inherit;
+}
+
+.footer-menu a:hover,
+.footer-links a:hover {
+    transform: scale(1.2);
 }
