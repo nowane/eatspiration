@@ -25,9 +25,9 @@ def homescreen():
     return render_template("base.html", home=home)
 
 
-@app.route("/register_login", methods=["GET", "POST"])
-def register_login():
-    return render_template("register-login.html")
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
 
 
 if __name__ == "__main__":
