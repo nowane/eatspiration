@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2 class="center-align">Register</h3>
+<h2 class="center-align">Register</h3>
 
     <div class="row">
         <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
-                <!-- username input field -->
+                <!-- Username input field -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-check prefix"></i>
@@ -14,7 +14,7 @@
                         <label for="username">Username</label>
                     </div>
                 </div>
-                <!-- password input field  -->
+                <!-- Password input field  -->
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-lock prefix"></i>
@@ -22,7 +22,17 @@
                         <label for="password">Password</label>
                     </div>
                 </div>
-                <!-- register button -->
+                <!-- Confirm password input field  -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-lock prefix"></i>
+                        <input id="password-confirm" name="password-confirm" type="password" required>
+                        <label for="password-confirm">
+                            Confirm Password
+                        </label>
+                    </div>
+                </div>
+                <!-- Registration button -->
                 <div class="row">
                     <button type="submit" class="col s12 btn">
                         Register <i class="fas fa-sign-in-alt"></i>
