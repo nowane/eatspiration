@@ -52,9 +52,23 @@
 
     </header>
 
-    {% block content %}
-    {% endblock %}
+    <section>
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row">
+                        <h5 class="center-align">{{ message }}</h5>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
     <!-- Footer -->
     <footer class="page-footer">
         <div class="container">
