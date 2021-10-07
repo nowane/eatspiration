@@ -15,6 +15,12 @@ header nav, footer{
     background-color: #5C8001 !important;
 }
 
+/* Navbar styling */
+.brand-logo {
+    margin-left: 1rem;
+    font-size: 3rem !important;
+}
+
 /* Footer positioning */
 .page-footer {
     position: fixed;
@@ -52,3 +58,12 @@ header nav, footer{
 .footer-links a:hover {
     transform: scale(1.2);
 }
+
+
+
+@media only screen and (max-width: 300px) {
+    .brand-logo {
+      font-size: 2rem !important;
+      margin-left: .1rem;
+    }
+  }
