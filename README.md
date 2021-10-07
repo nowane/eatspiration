@@ -112,7 +112,7 @@ User can contact site owner/admin | 3 | 5
 <details>
 <summary><b>Typography</b></summary>
 
-The headers are in Anton with Roboto as backup lettertype, while the body text is in Roboto. Anton was chosen for the headers because it is bold and clear, while Roboto is easy to read and widely used on the web. Sans-serif will be the the backup in case neither one loads.
+The headers are in Roboto Slab with Roboto as backup lettertype, while the body text is in Roboto. Roboto Slab was chosen for the headers because it is bold and clear, while Roboto is easy to read and widely used on the web. Sans-serif will be the the backup in case neither one loads.
 
 </details>
 
