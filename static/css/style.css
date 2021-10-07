@@ -1,11 +1,14 @@
 /* Fonts */
-body {
-    font-family: "Roboto", sans-serif;
+body, a {
+    font-family: "Roboto", "sans-serif";
+    font-style: normal !important;
 }
 
 body h1, h2, h3, h4, h5, h6 {
-    font-family: "Anton", "Roboto", sans-serif;
+    font-family: "roboto slab", "Roboto", "sans-serif";
+    font-style: normal !important;
 }
+
 
 /* Navbar and footer backgroud colour*/
 header nav, footer{
