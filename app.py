@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/homescreen")
-def homescreen():
-    home = mongo.db.tasks.find()
-    return render_template("base.html", home=home)
+@app.route("/get_recipes")
+def get_recipes():
+    recipes = list(mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
