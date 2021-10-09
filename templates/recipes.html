@@ -3,16 +3,15 @@
 
 <div class="row">
     <div class="col s12 m4 l3">
-        {% for recipe in recipes %}
+        {% for recipe in recipes%}
         <div class="card">
             <div class="card-image">
-                <img
-                    src="https://images.eatthismuch.com/site_media/img/39296_ldementhon_81a2d45f-cc37-4e12-bb3c-ab12c90c29ce.jpg" />
+                <img src="{{ recipe.image }}">
             </div>
             <div class="card-content">
                 <span class="card-title">{{ recipe.recipe_name }}</span>
-                <strong>Category: {{ recipe.category_name }}</strong>
-                <p>Description: {{ recipe.description }}</p>
+                <span>Servings: {{ recipe.servings }}</span><br>
+                <span>Prep time: {{ recipe.prep_time }}</span>
             </div>
         </div>
         {% endfor %}
