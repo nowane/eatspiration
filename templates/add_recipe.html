@@ -3,39 +3,46 @@
 
 <div class="card-panel">
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="recipe_name" name="recipe_name" type="text" class="validate">
+                    <input placeholder=". . . . ." id="recipe_name" name="recipe_name" type="text" class="validate" required>
                     <label for="recipe_name">Recipe name</label>
                 </div class="row">
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="servings" name="servings" type="number" class="validate">
+                    <input placeholder=". . . . ." id="servings" name="servings" type="number" class="validate" required>
                     <label for="servings">Servings per person</label>
                 </div class="row">
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="cuisine" name="cuisine" type="text" class="validate">
+                    <input placeholder=". . . . ." id="cuisine" name="cuisine" type="text" class="validate" required>
                     <label for="cuisine">Cuisine name</label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="prep_time" name="prep_time" type="number" class="validate">
+                    <input placeholder=". . . . ." id="prep_time" name="prep_time" type="number" class="validate" required>
                     <label for="prep_time">Preparation time in minutes</label>
                 </div>
                 <div class="input-field col s12">
-                    <textarea id="prep_steps" name="prep_steps" class="materialize-textarea validate"></textarea>
+                    <textarea id="prep_steps" name="prep_steps" class="materialize-textarea validate" required></textarea>
                     <label for="prep_steps">Preperation steps</label>
                 </div class="row">
                 <div class="input-field col s12">
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate"></textarea>
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
                     <label for="ingredients">Ingredients</label>
                 </div>
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="image" name="image" type="url" class="validate">
+                    <input placeholder=". . . . ." id="image" name="image" type="url" class="validate" required>
                     <label for="image">Add image URL</label>
                 </div class="row">
                 <div class="input-field col s12">
-                    <textarea id="description" name="description" class="materialize-textarea validate"></textarea>
+                    <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
                     <label for="description">Description</label>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                            Add Task <i class="fas fa-plus-square right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </form>
