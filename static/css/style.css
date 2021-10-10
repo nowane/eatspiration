@@ -39,6 +39,10 @@ body {
     flex: 1 0 auto;
 }
 
+.easter-egg {
+    color: #5C8001;
+}
+
 /* Footer styling */
 .footer-links li {
     display: inline-block;
