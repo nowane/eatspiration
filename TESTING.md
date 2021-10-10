@@ -86,8 +86,17 @@ Code validated using https://jshint.com/ .
 ## Documentation of any bugs encountered and their resolution steps
 
 - When adding the footer at the bottom at the page without being fixed using flexbox, there was a small gap of white space underneath the footer. According to devtools this was caused by an "I"-element with the classname of "material-icons".
+
 ![Footer white space](docs/testing/images/white-bottom-footer.png) 
-![material-icons](docs/testing/images/footer-i-material-icons.PNG) 
+![material-icons](docs/testing/images/footer-i-material-icons.png) 
+
+> This was solved deleting the last "row" class in the div with my name in it, since apparently this caused the white space. Deleting the whole div with the name in it still caused the space te appear. Because of this I decided on keeping the bottom div in the footer, and keep the name in it hidden. 
+
+![Footer white space solved](docs/testing/images/footer-hidden.png) 
+
+---
+
+
 
 
 [Back to the top](#testing)
