@@ -1,17 +1,24 @@
 /* Fonts */
-body, a {
+body,
+a {
     font-family: "Roboto", "sans-serif";
     font-style: normal !important;
 }
 
-body h1, h2, h3, h4, h5, h6 {
+body h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "roboto slab", "Roboto", "sans-serif";
     font-style: normal !important;
 }
 
 
 /* Navbar and footer backgroud colour*/
-header nav, footer{
+header nav,
+footer {
     background-color: #5C8001 !important;
 }
 
@@ -22,11 +29,14 @@ header nav, footer{
 }
 
 /* Footer positioning */
-.page-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 /* Footer styling */
@@ -45,7 +55,7 @@ header nav, footer{
 }
 
 .footer-menu li:last-child {
-    padding: 0 0.5rem
+    padding: 0 0.5rem;
 }
 
 .footer-menu a,
@@ -63,7 +73,7 @@ header nav, footer{
 
 @media only screen and (max-width: 300px) {
     .brand-logo {
-      font-size: 2rem !important;
-      margin-left: .1rem;
+        font-size: 2rem !important;
+        margin-left: .1rem;
     }
-  }
+}
