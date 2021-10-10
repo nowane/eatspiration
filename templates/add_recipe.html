@@ -1,43 +1,45 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="recipe_name" name="recipe_name" type="text" class="validate">
-                <label for="recipe_name">Recipe Name</label>
-            </div class="row">
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="category_name" name="category_name" type="text" class="validate">
-                <label for="category_name">Category Name</label>
+<div class="card-panel">
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder=". . . . ." id="recipe_name" name="recipe_name" type="text" class="validate">
+                    <label for="recipe_name">Recipe name</label>
+                </div class="row">
+                <div class="input-field col s12">
+                    <input placeholder=". . . . ." id="servings" name="servings" type="number" class="validate">
+                    <label for="servings">Servings per person</label>
+                </div class="row">
+                <div class="input-field col s12">
+                    <input placeholder=". . . . ." id="cuisine" name="cuisine" type="text" class="validate">
+                    <label for="cuisine">Cuisine name</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder=". . . . ." id="prep_time" name="prep_time" type="number" class="validate">
+                    <label for="prep_time">Preparation time in minutes</label>
+                </div>
+                <div class="input-field col s12">
+                    <textarea id="prep_steps" name="prep_steps" class="materialize-textarea validate"></textarea>
+                    <label for="prep_steps">Preperation steps</label>
+                </div class="row">
+                <div class="input-field col s12">
+                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate"></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+                <div class="input-field col s12">
+                    <input placeholder=". . . . ." id="image" name="image" type="url" class="validate">
+                    <label for="image">Add image URL</label>
+                </div class="row">
+                <div class="input-field col s12">
+                    <textarea id="description" name="description" class="materialize-textarea validate"></textarea>
+                    <label for="description">Description</label>
+                </div>
             </div>
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="image" name="image" type="url" class="validate">
-                <label for="image">Add Image URL</label>
-            </div class="row">
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="description" name="description" type="text" class="validate">
-                <label for="description">Description</label>
-            </div>
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="servings" name="servings" type="number" class="validate">
-                <label for="servings">Servings per person</label>
-            </div class="row">
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="prep_time" name="prep_time" type="number" class="validate">
-                <label for="prep_time">Preparation time in minutes</label>
-            </div>
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="prep_steps" name="prep_steps" type="text" class="validate">
-                <label for="prep_steps">Preperation steps</label>
-            </div class="row">
-            <div class="input-field col s12">
-                <input placeholder=". . . . ." id="ingredients" name="ingredients" type="text" class="validate">
-                <label for="ingredients">Ingredients</label>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 {% endblock %}
