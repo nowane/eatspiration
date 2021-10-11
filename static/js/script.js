@@ -51,3 +51,8 @@ $('#prep_step .add-prep-list-item').click(function (event) {
                     </li>`;
 	$(this).parent().before(prepStep);
 });
+
+// Remove preperation list item when thrash icon is clicked
+$('#prep_step').on("click", ".remove-list-item", function (event) {
+	$(this).parent().remove();
+});
