@@ -1,52 +1,104 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="card-panel">
-    <div class="row">
-        <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
-            <div class="row">
+<h3 class="center-align">Add Recipe</h3>
+
+<div class="card">
+    <form method="POST" action="{{ url_for('add_recipe') }}">
+        <div class="row">
+            <!-- Recipe URL Upload -->
+            <div class="input-field col s12">
+                <input id="image" name="image" type="url" class="validate" required>
+                <label for="image">Add image URL</label>
+            </div>
+            <!-- Recipe Title -->
+            <div class="input-field col s12 m4">
+                <input id="recipe_name" name="recipe_name" minlength="3" maxlength="70" type="text"
+                    pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" class="validate" required>
+                <label for="recipe_name">Recipe Name</label>
+            </div>
+            <!-- Serving Amount -->
+            <div class="input-field col s12 m4">
+                <input type="number" id="servings" name="servings" class="validate" min="1" max="20" required>
+                <label for="servings">Servings</label>
+            </div>
+            <!-- Recipe Cuisine Choice -->
+            <div class="input-field col s12 m4">
+                <select id="cuisine_type" name="cuisine_type" class="validate" required>
+                    <option value="" disabled selected>Select</option>
+                    {% for cuisine in cuisines %}
+                    <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type }}</option>
+                    {% endfor %}
+                </select>
+                <label for="cuisine_type">Cuisine</label>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Preparation Time -->
+            <div class="col s6">
+                <h6>Prep Time</h6>
                 <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="recipe_name" name="recipe_name" type="text" class="validate" required>
-                    <label for="recipe_name">Recipe name</label>
-                </div class="row">
-                <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="servings" name="servings" type="number" class="validate" required>
-                    <label for="servings">Servings per person</label>
-                </div class="row">
-                <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="cuisine" name="cuisine" type="text" class="validate" required>
-                    <label for="cuisine">Cuisine name</label>
-                </div>
-                <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="prep_time" name="prep_time" type="number" class="validate" required>
-                    <label for="prep_time">Preparation time in minutes</label>
-                </div>
-                <div class="input-field col s12">
-                    <textarea id="prep_steps" name="prep_steps" class="materialize-textarea validate" required></textarea>
-                    <label for="prep_steps">Preperation steps</label>
-                </div class="row">
-                <div class="input-field col s12">
-                    <textarea id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
-                    <label for="ingredients">Ingredients</label>
-                </div>
-                <div class="input-field col s12">
-                    <input placeholder=". . . . ." id="image" name="image" type="url" class="validate" required>
-                    <label for="image">Add image URL</label>
-                </div class="row">
-                <div class="input-field col s12">
-                    <textarea id="description" name="description" class="materialize-textarea validate" required></textarea>
-                    <label for="description">Description</label>
-                </div>
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                            Add Task <i class="fas fa-plus-square right"></i>
-                        </button>
-                    </div>
+                    <input type="number" id="prep_time" name="prep_time" class="validate" min="0" max="59" required>
+                    <label for="prep_time">in minutes</label>
                 </div>
             </div>
-        </form>
-    </div>
+            <!-- Cooking time -->
+            <div class="col s6">
+                <h6>Cooking Time</h6>
+                <div class="input-field col s12">
+                    <input type="number" id="cook_time" name="cook_time" class="validate" min="0" max="360" required>
+                    <label for="cook_time">in minutes</label>
+                </div>
+            </div>
+        </div>
+        <!-- Description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="description" name="description" minlength="10" maxlength="140"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="description">Description</label>
+                <span class="helper-text">Description between 10 and 140 characters</span>
+            </div>
+        </div>
+        <!-- Ingredients -->
+        <div class="row">
+            <div class="col s12">
+                <h6>Ingredients</h6>
+            </div>
+            <div class="col s12">
+                <ul id="ingredients" class="collection validate">
+                    <li class="collection-item">
+                        <a class="btn add-ingredient-list-item">
+                            <span class="sr-only">Add Ingredient</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Preperation Steps -->
+        <div class="row">
+            <div class="col s12">
+                <h6>Preperation Steps</h6>
+            </div>
+            <div class="col s12">
+                <ul id="method_step" class="collection validate">
+                    <li class="collection-item">
+                        <a class="btn add-prep-list-item">
+                            <span class="sr-only">Add Preperation Step</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Submit Button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large">
+                    Submit Recipe
+                </button>
+            </div>
+        </div>
+    </form>
 </div>
 
 {% endblock %}
