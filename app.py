@@ -21,12 +21,14 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
+    """ Returns list of recipes from database """
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """ Insert new user into db """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -55,6 +57,7 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """ Log in existing user and redirect to custom profile view"""
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -80,6 +83,7 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """ Render profile page based on logged in session user """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -91,6 +95,7 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
+    """ Remove session cookies from user """
     flash("Logged out Successfully")
     session.pop("user")
     return redirect(url_for("login"))
@@ -98,6 +103,7 @@ def logout():
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    """ Insert new recipe to database """
     if request.method == "POST":
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
@@ -120,15 +126,17 @@ def add_recipe():
 
 @app.errorhandler(404)
 def not_found(error):
+    """ Return custom 404  page when page is not found """
     return render_template('404.html')
 
 
 @app.errorhandler(500)
 def internal_error(error):
+    """ Return custom 500 page when an error occurs """
     return render_template("500.html", error=error), 500
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)
+            debug=True)
