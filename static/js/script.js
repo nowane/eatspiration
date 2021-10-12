@@ -2,6 +2,7 @@ $(document).ready(function () {
 	$('.sidenav').sidenav({
 		edge: "right"
 	});
+	$('select').formSelect();
 });
 
 // Check if confirm password matches password and set valid/invalid

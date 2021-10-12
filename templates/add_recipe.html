@@ -6,7 +6,7 @@
 <div class="card">
     <form method="POST" action="{{ url_for('add_recipe') }}">
         <div class="row">
-            <!-- Recipe URL Upload -->
+            <!-- URL of image -->
             <div class="input-field col s12">
                 <input id="image" name="image" type="url" class="validate" required>
                 <label for="image">Add image URL</label>
@@ -17,20 +17,20 @@
                     pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
-            <!-- Serving Amount -->
+            <!-- Servings -->
             <div class="input-field col s12 m4">
                 <input type="number" id="servings" name="servings" class="validate" min="1" max="20" required>
                 <label for="servings">Servings</label>
             </div>
-            <!-- Recipe Cuisine Choice -->
+            <!-- Cuisine Choice -->
             <div class="input-field col s12 m4">
                 <select id="cuisine_type" name="cuisine_type" class="validate" required>
-                    <option value="" disabled selected>Select</option>
+                    <option value="" disabled selected>Cuisine Type</option>
                     {% for cuisine in cuisines %}
-                        <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type }}</option>
+                    <option value="{{ cuisine.cuisine_type|capitalize }}">{{ cuisine.cuisine_type|capitalize }}</option>
                     {% endfor %}
                 </select>
-                <label for="cuisine_type">Cuisine</label>
+                <label for="cuisine_type">Select Cuisine</label>
             </div>
         </div>
         <div class="row">

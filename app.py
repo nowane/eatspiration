@@ -108,7 +108,7 @@ def add_recipe():
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "image": request.form.get("image"),
-            "description": request.form.getlist("description"),
+            "description": request.form.get("description"),
             "cuisine_type": request.form.get("cuisine_type"),
             "servings": request.form.get("servings"),
             "prep_time": request.form.get("prep_time"),
@@ -120,8 +120,8 @@ def add_recipe():
         flash("Recipe Successfully Added")
         return redirect(url_for("get_recipes"))
 
-    cuisine = mongo.db.cuisine.find().sort("cuisine_type", 1)
-    return render_template("add_recipe.html", cuisine=cuisine)
+    cuisines = mongo.db.cuisines.find().sort("cuisine_type", 1)
+    return render_template("add_recipe.html", cuisines=cuisines)
 
 
 @app.errorhandler(404)
