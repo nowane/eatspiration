@@ -4,7 +4,7 @@
 <h3 class="center-align">Edit Recipe</h3>
 
 <div class="card">
-    <form method="POST" action="{{ url_for('edit_recipe') }}">
+    <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <div class="row">
             <!-- URL of image -->
             <div class="input-field col s12">
