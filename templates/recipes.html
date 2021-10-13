@@ -4,16 +4,17 @@
 <div class="row">
     <div class="col s12 m4 l3">
         {% for recipe in recipes%}
-        <div class="card">
-            <div class="card-image">
-                <img src="{{ recipe.image }}">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ recipe.image }}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{ recipe.recipe_name }}</span>
+                    <span>Servings: {{ recipe.servings }} person</span><br>
+                    <span>Prep time: {{ recipe.prep_time }} min</span><br>
+                    <a href="" class="btn-small">Edit</a>
+                </div>
             </div>
-            <div class="card-content">
-                <span class="card-title">{{ recipe.recipe_name }}</span>
-                <span>Servings: {{ recipe.servings }} p.</span><br>
-                <span>Prep time: {{ recipe.prep_time }} min</span>
-            </div>
-        </div>
         {% endfor %}
     </div>
 </div>
