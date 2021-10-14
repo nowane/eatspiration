@@ -114,7 +114,8 @@ def add_recipe():
             "prep_time": request.form.get("prep_time"),
             "prep_steps": request.form.getlist("prep_steps"),
             "ingredients": request.form.getlist("ingredients"),
-            "username": session["user"]
+            "username": session["user"],
+            "cook_time": request.form.get("cook_time")
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -126,6 +127,23 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        edit = {
+            "recipe_name": request.form.get("recipe_name"),
+            "image": request.form.get("image"),
+            "description": request.form.get("description"),
+            "cuisine_type": request.form.get("cuisine_type"),
+            "servings": request.form.get("servings"),
+            "prep_time": request.form.get("prep_time"),
+            "prep_steps": request.form.getlist("prep_steps"),
+            "ingredients": request.form.getlist("ingredients"),
+            "username": session["user"],
+            "cook_time": request.form.get("cook_time")
+        }
+        mongo.db.recipes.update({"_id":ObjectId(recipe_id)}, edit)
+        flash("Recipe Successfully Updated")
+        return redirect(url_for("get_recipes"))
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     cuisines = mongo.db.cuisines.find().sort("cuisine_type", 1)
     return render_template("edit_recipe.html", recipe=recipe, cuisines=cuisines)
