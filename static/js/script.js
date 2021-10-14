@@ -54,7 +54,7 @@ $('#ingredients .add-ingredient-list-item').click(function (event) {
                                     <input name="ingredients" type="text" maxlength="70" required>
                                     <label for="ingredients">Ingredient</label>
                                 </div>
-                                <a class="remove-list-item">
+                                <a class="remove-ingredient-list-item">
                                     <span class="sr-only">Remove Ingredient</span>
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
@@ -63,7 +63,7 @@ $('#ingredients .add-ingredient-list-item').click(function (event) {
 });
 
 // Remove ingredient list item when thrash icon is clicked
-$('#ingredients').on("click", ".remove-list-item", function (event) {
+$('#ingredients').on("click", ".remove-ingredient-list-item", function (event) {
 	$(this).parent().remove();
 });
 
@@ -74,7 +74,7 @@ $('#prep_step .add-prep-list-item').click(function (event) {
                             <textarea name="prep_step" class="materialize-textarea" required></textarea>
                             <label for="prep_step">Step Description</label>
                         </div>
-						<a class="remove-list-item">
+						<a class="remove-prep-list-item">
 							<i class="fas fa-trash-alt"></i>
 							<span class="sr-only">Remove Preperation Step</span>
 						</a>
@@ -83,6 +83,6 @@ $('#prep_step .add-prep-list-item').click(function (event) {
 });
 
 // Remove preperation list item when thrash icon is clicked
-$('#prep_step').on("click", ".remove-list-item", function (event) {
+$('#prep_step').on("click", ".remove-prep-list-item", function (event) {
 	$(this).parent().remove();
 });

@@ -8,26 +8,30 @@
         <div class="row">
             <!-- URL of image -->
             <div class="input-field col s12">
-                <input id="image" name="image" type="url" class="validate" required>
+                <input id="image" name="image" type="url" value="{{ recipe.image }}" class="validate" required>
                 <label for="image">Add image URL</label>
             </div>
             <!-- Recipe Title -->
             <div class="input-field col s12 m4">
                 <input id="recipe_name" name="recipe_name" minlength="3" maxlength="70" type="text"
-                    pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" class="validate" required>
+                    pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" value="{{ recipe.recipe_name }}" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
             <!-- Servings -->
             <div class="input-field col s12 m4">
-                <input type="number" id="servings" name="servings" class="validate" min="1" max="20" required>
+                <input type="number" id="servings" name="servings" class="validate" min="1" max="20" value="{{ recipe.servings }}" required>
                 <label for="servings">Servings</label>
             </div>
             <!-- Cuisine Choice -->
             <div class="input-field col s12 m4">
                 <select id="cuisine_type" name="cuisine_type" class="validate" required>
-                    <option value="" disabled selected>Cuisine Type</option>
+                    <option value="" disabled>Cuisine Type</option>
                     {% for cuisine in cuisines %}
-                    <option value="{{ cuisine.cuisine_type|capitalize }}">{{ cuisine.cuisine_type|capitalize }}</option>
+                        {% if cuisine.cuisine_type == recipe.cuisine_type %}
+                            <option value="{{ cuisine.cuisine_type|capitalize }}" selected>{{ cuisine.cuisine_type|capitalize }}</option>
+                        {% else %}
+                            <option value="{{ cuisine.cuisine_type|capitalize }}">{{ cuisine.cuisine_type|capitalize }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="cuisine_type">Select Cuisine</label>
@@ -38,7 +42,7 @@
             <div class="col s6">
                 <h6>Prep Time</h6>
                 <div class="input-field col s12">
-                    <input type="number" id="prep_time" name="prep_time" class="validate" min="0" max="360" required>
+                    <input type="number" id="prep_time" name="prep_time" class="validate" min="0" max="360" value="{{ recipe.prep_time }}" required>
                     <label for="prep_time">in minutes</label>
                 </div>
             </div>
@@ -46,7 +50,7 @@
             <div class="col s6">
                 <h6>Cooking Time</h6>
                 <div class="input-field col s12">
-                    <input type="number" id="cook_time" name="cook_time" class="validate" min="0" max="360" required>
+                    <input type="number" id="cook_time" name="cook_time" class="validate" min="0" max="360" value="{{ recipe.cook_time }}" required>
                     <label for="cook_time">in minutes</label>
                 </div>
             </div>
@@ -55,7 +59,9 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="description" name="description" minlength="10" maxlength="140"
-                    class="materialize-textarea validate" required></textarea>
+                    class="materialize-textarea validate" required>
+                    {{- recipe.description -}}
+                </textarea>
                 <label for="description">Description</label>
                 <span class="helper-text">Description between 10 and 140 characters</span>
             </div>
@@ -67,6 +73,14 @@
             </div>
             <div class="col s12">
                 <ul id="ingredients" class="collection validate">
+                    {% for ingredient in recipe.ingredients %}
+                        <li class="collection-item">
+                            <div class="input-field">
+                                <input name="ingredients" type="text" maxlength="70"  value="{{ ingredient }}"required>
+                                <label for="ingredients">Ingredient</label>
+                            </div>
+                        </li>
+                    {% endfor %}
                     <li class="collection-item">
                         <a class="btn add-ingredient-list-item">
                             <i class="fas fa-plus"></i>
@@ -83,6 +97,16 @@
             </div>
             <div class="col s12">
                 <ul id="prep_step" class="collection validate">
+                    {% for prep_step in recipe.prep_steps %}
+                        <li class="collection-item">
+                            <div class="input-field">
+                                <textarea name="prep_step" class="materialize-textarea" required>
+                                    {{- prep_step -}}
+                                </textarea>
+                                <label for="prep_step">Prep Description</label>
+                            </div>
+                        </li>
+                    {% endfor %}
                     <li class="collection-item">
                         <a class="btn add-prep-list-item">
                             <i class="fas fa-plus"></i>
@@ -95,6 +119,7 @@
         <!-- Submit Button -->
         <div class="row">
             <div class="col s12 center-align">
+                <a href="{{ url_for('get_recipes') }}" class="btn-large red">Cancel</a>
                 <button type="submit" class="btn-large">
                     Edit Recipe
                 </button>

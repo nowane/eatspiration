@@ -114,8 +114,8 @@ def add_recipe():
             "prep_time": request.form.get("prep_time"),
             "prep_steps": request.form.getlist("prep_steps"),
             "ingredients": request.form.getlist("ingredients"),
-            "username": session["user"],
-            "cook_time": request.form.get("cook_time")
+            "cook_time": request.form.get("cook_time"),
+            "username": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -137,8 +137,8 @@ def edit_recipe(recipe_id):
             "prep_time": request.form.get("prep_time"),
             "prep_steps": request.form.getlist("prep_steps"),
             "ingredients": request.form.getlist("ingredients"),
-            "username": session["user"],
-            "cook_time": request.form.get("cook_time")
+            "cook_time": request.form.get("cook_time"),
+            "username": session["user"]
         }
         mongo.db.recipes.update({"_id":ObjectId(recipe_id)}, edit)
         flash("Recipe Successfully Updated")
@@ -146,7 +146,8 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     cuisines = mongo.db.cuisines.find().sort("cuisine_type", 1)
-    return render_template("edit_recipe.html", recipe=recipe, cuisines=cuisines)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, cuisines=cuisines)
 
 
 @app.errorhandler(404)
