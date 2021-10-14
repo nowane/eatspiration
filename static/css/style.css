@@ -28,6 +28,14 @@ footer {
     font-size: 3rem !important;
 }
 
+/* Recipe Card styling */
+img {
+    float: left;
+    width:  100px;
+    height: 200px;
+    object-fit: cover;
+}
+
 /* Footer positioning */
 body {
     display: flex;
