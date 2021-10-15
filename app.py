@@ -150,6 +150,13 @@ def edit_recipe(recipe_id):
         "edit_recipe.html", recipe=recipe, cuisines=cuisines)
 
 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Deleted")
+    return redirect(url_for("get_recipes"))
+
+
 @app.errorhandler(404)
 def not_found(error):
     """ Return custom 404  page when page is not found """
