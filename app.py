@@ -157,6 +157,12 @@ def delete_recipe(recipe_id):
     return redirect(url_for("get_recipes"))
 
 
+@app.route("/get_cuisines")
+def get_cuisines():
+    cuisines = list(mongo.db.cuisines.find().sort("cuisine_type", 1))
+    return render_template("cuisines.html", cuisines=cuisines)
+
+
 @app.errorhandler(404)
 def not_found(error):
     """ Return custom 404  page when page is not found """
