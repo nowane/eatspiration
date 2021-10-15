@@ -96,21 +96,19 @@
                 <h6>Preperation Steps</h6>
             </div>
             <div class="col s12">
-                <ul id="prep_step" class="collection validate">
+                <ul id="prep_steps" class="collection validate">
                     {% for prep_step in recipe.prep_steps %}
                         <li class="collection-item">
                             <div class="input-field">
-                                <textarea name="prep_step" class="materialize-textarea" required>
-                                    {{- prep_step -}}
-                                </textarea>
-                                <label for="prep_step">Prep Description</label>
+                                <input name="prep_steps" type="text" maxlength="140"  value="{{ prep_step }}"required>
+                                <label for="prep_steps">Preperation Step</label>
                             </div>
                         </li>
                     {% endfor %}
                     <li class="collection-item">
                         <a class="btn add-prep-list-item">
                             <i class="fas fa-plus"></i>
-                            <span class="sr-only">Add Preperation Step</span>
+                            <span class="sr-only">Add Ingredient</span>
                         </a>
                     </li>
                 </ul>

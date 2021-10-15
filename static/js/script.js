@@ -68,21 +68,21 @@ $('#ingredients').on("click", ".remove-ingredient-list-item", function (event) {
 });
 
 // Add preperation item to list when plus icon is clicked
-$('#prep_step .add-prep-list-item').click(function (event) {
-	let prepStep = `<li class="collection-item">
-                        <div class="input-field">
-                            <textarea name="prep_step" class="materialize-textarea" required></textarea>
-                            <label for="prep_step">Step Description</label>
-                        </div>
-						<a class="remove-prep-list-item">
-							<i class="fas fa-trash-alt"></i>
-							<span class="sr-only">Remove Preperation Step</span>
-						</a>
-                    </li>`;
-	$(this).parent().before(prepStep);
+$('#prep_steps .add-prep-list-item').click(function (event) {
+    let prepListItem = `<li class="collection-item">
+                            <div class="input-field">
+                                <input name="prep_steps" type="text" maxlength="140" required>
+                                <label for="prep_steps">Preperation Step</label>
+                            </div>
+                            <a class="remove-prep-list-item">
+                                <span class="sr-only">Remove Preperation Step</span>
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </li>`;
+            $(this).parent().before(prepListItem);
 });
 
 // Remove preperation list item when thrash icon is clicked
-$('#prep_step').on("click", ".remove-prep-list-item", function (event) {
+$('#prep_steps').on("click", ".remove-prep-list-item", function (event) {
 	$(this).parent().remove();
 });
