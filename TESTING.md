@@ -106,9 +106,9 @@ Code validated using https://jshint.com/ .
 
 ---
 
-- At the "Edit Recipe" page there was an issue where whenever you changed data and submitted all was saved correctly. However when submitting the for whenever there were no changes deleted the preperation steps, which were inserted in a textarea element.
+- At the "Edit Recipe" page there was an issue where whenever you changed data and submitted all was saved correctly. However when submitting the for whenever there were no changes deleted the preparation steps, which were inserted in a textarea element.
 
-> This was resolved by editing the input element of the preperation steps, which is now the same as the ingredients input.
+> This was resolved by editing the input element of the preparation steps, which is now the same as the ingredients input.
 
 
 [Back to the top](#testing)

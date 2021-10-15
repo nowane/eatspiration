@@ -67,22 +67,22 @@ $('#ingredients').on("click", ".remove-ingredient-list-item", function (event) {
 	$(this).parent().remove();
 });
 
-// Add preperation item to list when plus icon is clicked
+// Add preparation item to list when plus icon is clicked
 $('#prep_steps .add-prep-list-item').click(function (event) {
     let prepListItem = `<li class="collection-item">
                             <div class="input-field">
                                 <input name="prep_steps" type="text" maxlength="140" required>
-                                <label for="prep_steps">Preperation Step</label>
+                                <label for="prep_steps">Preparation Step</label>
                             </div>
                             <a class="remove-prep-list-item">
-                                <span class="sr-only">Remove Preperation Step</span>
+                                <span class="sr-only">Remove Preparation Step</span>
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                         </li>`;
             $(this).parent().before(prepListItem);
 });
 
-// Remove preperation list item when thrash icon is clicked
+// Remove preparation list item when thrash icon is clicked
 $('#prep_steps').on("click", ".remove-prep-list-item", function (event) {
 	$(this).parent().remove();
 });
