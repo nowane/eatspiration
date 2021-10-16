@@ -127,6 +127,7 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    """ Update recipe record in database """
     if request.method == "POST":
         edit = {
             "recipe_name": request.form.get("recipe_name"),
@@ -140,7 +141,7 @@ def edit_recipe(recipe_id):
             "cook_time": request.form.get("cook_time"),
             "username": session["user"]
         }
-        mongo.db.recipes.update({"_id":ObjectId(recipe_id)}, edit)
+        mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
         flash("Recipe Successfully Updated")
         return redirect(url_for("get_recipes"))
 
@@ -152,6 +153,7 @@ def edit_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    """ Remove recipe record from database, based on recipe_id """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Deleted")
     return redirect(url_for("get_recipes"))
@@ -159,6 +161,7 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_cuisines")
 def get_cuisines():
+    """ Returns list of categories from database in ascending order: """
     cuisines = list(mongo.db.cuisines.find().sort("cuisine_type", 1))
     return render_template("cuisines.html", cuisines=cuisines)
 
