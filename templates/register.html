@@ -13,6 +13,11 @@
                         <i class="fas fa-user-check prefix"></i>
                         <input id="username" name="username" type="text" pattern="^[a-zA-Z0-9]{3,20}$" class="validate">
                         <label for="username">Username</label>
+                        <span class="helper-text"
+                            data-error="username needs to have at least three and at most twenty characters"
+                            data-success="Good">
+                            Minimum of three, maximum of twenty characters
+                        </span>
                     </div>
                 </div>
                 <!-- Password input field  -->
