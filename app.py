@@ -265,6 +265,7 @@ def add_cuisine():
 @app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
 @admin_required
 def edit_cuisine(cuisine_id):
+    """ Allows admin user to edit existing cuisine data in the database. """
     if request.method == "POST":
         submit = {
             "cuisine_type": request.form.get("cuisine_type"),
@@ -278,9 +279,18 @@ def edit_cuisine(cuisine_id):
     return render_template("edit_cuisine.html", cuisine=cuisine)
 
 
+@app.route("/delete_cuisine/<cuisine_id>")
+@admin_required
+def delete_cuisine(cuisine_id):
+    """ Allows admin user to delete cuisine data from the database. """
+    mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
+    flash("Cuisine Successfully Deleted")
+    return redirect(url_for("get_cuisines"))
+
+
 @app.errorhandler(404)
 def not_found(error):
-    """ Return custom 404  page when page is not found """
+    """ Return custom 404 page when page is not found """
     return render_template('404.html'), 404
 
 
