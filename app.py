@@ -76,6 +76,18 @@ def login_required(function):
             return redirect(url_for("login"))
     return wrap
 
+
+def not_logged_in(function):
+    """ Decorator function that disables a route if a user is logged in """
+    @wraps(function)
+    def wrap(*args, **kwargs):
+        if 'user' not in session:
+            return function(*args, **kwargs)
+
+        flash("You are logged in!")
+        return redirect(url_for("get_recipes"))
+    return wrap
+
 # ------
 
 
