@@ -22,7 +22,7 @@
                     <span class="card-title">{{ cuisine.cuisine_type|capitalize }}</span>
                 </div>
                 <div class="card-action">
-                    <a href="#" class="btn-small">Edit Cuisine</a>
+                    <a href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}" class="btn-small">Edit Cuisine</a>
                     <a href="#" class="btn-small">Delete Cuisine</a>
                 </div>
             </div>

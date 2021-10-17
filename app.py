@@ -262,6 +262,22 @@ def add_cuisine():
     return render_template("login.html")
 
 
+@app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
+@admin_required
+def edit_cuisine(cuisine_id):
+    if request.method == "POST":
+        submit = {
+            "cuisine_type": request.form.get("cuisine_type"),
+            "image": request.form.get("image")
+        }
+        mongo.db.cuisines.update({"_id": ObjectId(cuisine_id)}, submit)
+        flash("Cuisine Successfully Updated")
+        return redirect(url_for("get_cuisines"))
+
+    cuisine = mongo.db.cuisines.find_one({"_id": ObjectId(cuisine_id)})
+    return render_template("edit_cuisine.html", cuisine=cuisine)
+
+
 @app.errorhandler(404)
 def not_found(error):
     """ Return custom 404  page when page is not found """
