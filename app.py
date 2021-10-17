@@ -18,6 +18,25 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# -- GLOBAL FUNCTIONS --
+def user_find():
+    """
+    Get the current user using the username value of the current session
+    user, returning the current user as a dict.
+    """
+    current_user = mongo.db.users.find_one({"username": session["user"]})
+    return current_user
+
+
+def id_find():
+    """
+    Get the ObjectId value of the current user, returning it as
+    a string value
+    """
+    user_id = str(user_find()['_id'])
+    return user_id
+
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -85,7 +104,6 @@ def profile(username):
     """ Render profile page based on logged in session user """
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
     if session["user"]:
         return render_template("profile.html", username=username)
 
@@ -168,7 +186,7 @@ def get_cuisines():
 @app.errorhandler(404)
 def not_found(error):
     """ Return custom 404  page when page is not found """
-    return render_template('404.html')
+    return render_template('404.html'), 404
 
 
 @app.errorhandler(500)
