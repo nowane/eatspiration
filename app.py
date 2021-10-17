@@ -138,7 +138,11 @@ def search():
     """ Build query function to show the search page and results """
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
-    return render_template("recipes.html", recipes=recipes)
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("recipes.html",
+                           recipes=recipes_paginated,
+                           pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])
