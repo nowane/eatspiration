@@ -110,6 +110,15 @@ Code validated using https://jshint.com/ .
 
 > This was resolved by editing the input element of the preparation steps, which is now the same as the ingredients input.
 
+---
+
+- A KeyError occured when the admin-user tried clicking the button to add a "Cuisine Type".
+
+![Keyerror](docs/testing/images/keyerror_admin.png)
+
+> After some fiddling it became clear that the admin user was not called correctly in the "admin_user():" function. This was corrected.
+
+---
 
 [Back to the top](#testing)
 
