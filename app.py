@@ -108,6 +108,7 @@ def search():
 
 
 @app.route("/register", methods=["GET", "POST"])
+@not_logged_in
 def register():
     """ Insert new user into db """
     if request.method == "POST":
@@ -136,6 +137,7 @@ def register():
 
 
 @app.route("/login", methods=["GET", "POST"])
+@not_logged_in
 def login():
     """ Log in existing user and redirect to custom profile view"""
     if request.method == "POST":
