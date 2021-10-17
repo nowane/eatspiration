@@ -20,12 +20,6 @@ mongo = PyMongo(app)
 
 
 # -- GLOBAL FUNCTIONS --
-def if_admin():
-    """ Check to see if user in session is "admin" """
-    admin = user_find()['admin']
-    return admin
-
-
 def user_find():
     """
     Get the current user using the username value of the current session
@@ -33,6 +27,13 @@ def user_find():
     """
     current_user = mongo.db.users.find_one({"username": session["user"]})
     return current_user
+
+
+def admin_user():
+    """ Check to see if user in session is admin """
+    admin = mongo.db.users.find_one(
+            {"username": "admin".lower()})
+    return admin
 
 
 def id_find():
@@ -48,16 +49,16 @@ def id_find():
 # https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required
 def admin_required(function):
     """
-    Decorator function that uses the if_admin() function above. Ensures
-    that a user is has admin privileges to access the wrapped function.
+    Decorator function that uses the admin_user() function above. Ensures
+    that a user has admin privileges to access the wrapped function.
     """
     @wraps(function)
     def wrap(*args, **kwargs):
-        if if_admin():
+        if admin_user():
             return function(*args, **kwargs)
         else:
             flash("You do not have admin privileges")
-            return redirect(url_for('home'))
+            return redirect(url_for("get_recipes"))
     return wrap
 
 
@@ -72,7 +73,7 @@ def login_required(function):
             return function(*args, **kwargs)
         else:
             flash("You need to login first")
-            return redirect(url_for('login'))
+            return redirect(url_for("login"))
     return wrap
 
 # ------
@@ -224,9 +225,41 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_cuisines")
 def get_cuisines():
-    """ Returns list of categories from database in ascending order: """
+    """ Returns list of cuisines from database in ascending order """
     cuisines = list(mongo.db.cuisines.find().sort("cuisine_type", 1))
     return render_template("cuisines.html", cuisines=cuisines)
+
+
+@app.route("/add_cuisine", methods=["GET", "POST"])
+@admin_required
+def add_cuisine():
+    """
+    Allows admin to add a new cuisine in the DB.
+    Check whether a cuisine with the same name already exist before
+    saving new cuisine.
+    """
+    if user_find() == admin_user():
+
+        if request.method == "POST":
+            existing_cuisine = mongo.db.cuisines.find_one(
+                {"cuisine_type": request.form.get("cuisine_type").lower()})
+
+            if existing_cuisine:
+                flash("Cuisine Already Exists")
+                return redirect(url_for("add_cuisine"))
+
+            cuisine = {
+                "cuisine_type": request.form.get("cuisine_type").lower(),
+                "image": request.form.get("image")
+            }
+
+            mongo.db.cuisines.insert_one(cuisine)
+            flash("New Cuisine Added")
+            return redirect(url_for("get_cuisines", username=session["user"]))
+
+        return render_template("add_cuisine.html")
+
+    return render_template("login.html")
 
 
 @app.errorhandler(404)
