@@ -4,6 +4,14 @@
 <h3 class="center-align">Manage Cuisines</h3>
 
 <div class="row">
+    <div class="col s12 center-align">
+        <a href="{{ url_for('add_cuisine') }}" class="btn-large">
+            Add Cuisine
+        </a>
+    </div>
+</div>
+
+<div class="row">
     {% for cuisine in cuisines %}
         <div class="col s12 m6 l4 xl3">
             <div class="card medium center-align">
