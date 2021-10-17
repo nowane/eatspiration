@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">Add Cuisine</h3>
+
+<div class="card">
+    <form method="POST" action="{{ url_for('add_cuisine') }}">
+        <div class="row">
+            <!-- URL of image -->
+            <div class="input-field col s12">
+                <input id="image" name="image" type="url" class="validate" required>
+                <label for="image">Add image URL</label>
+            </div>
+            <!-- Cuisine Title -->
+            <div class="input-field col s12 m4">
+                <input id="cuisine_type" name="cuisine_type" minlength="3" maxlength="70" type="text"
+                    pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" class="validate" required>
+                <label for="cuisine_type">Cuisine Name</label>
+            </div>
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large">
+                        Submit Recipe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
