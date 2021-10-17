@@ -42,8 +42,13 @@
                 </div>
             {% endfor %}
         </div>
+        
     {% else %}
         <h3 class="center-align">No Recipes Found</h3>
     {% endif %}
+    <!-- Pagination links generated -->
+    <div class="center-align">
+        {{ pagination.links }}
+    </div>
 
 {% endblock %}

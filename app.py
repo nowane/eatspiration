@@ -3,6 +3,7 @@ from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
+from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -17,6 +18,9 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+# Pagination items per page
+PER_PAGE = 8
 
 
 # -- GLOBAL FUNCTIONS --
@@ -91,12 +95,42 @@ def not_logged_in(function):
 # ------
 
 
+# Pagination
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+def paginated(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
+
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     """ Returns list of recipes from database """
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    recipes_paginated = paginated(recipes)
+    pagination = pagination_args(recipes)
+    return render_template("recipes.html",
+                           recipes=recipes_paginated,
+                           pagination=pagination)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -120,7 +154,7 @@ def register():
             return redirect(url_for("register"))
 
         if request.form.get(
-            "password") != request.form.get("password-confirm"):
+                "password") != request.form.get("password-confirm"):
             flash("Passwords do not match!")
             return redirect(url_for("register"))
 
@@ -146,7 +180,7 @@ def login():
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
                     request.form.get("username")))
