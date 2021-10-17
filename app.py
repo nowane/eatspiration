@@ -20,6 +20,12 @@ mongo = PyMongo(app)
 
 
 # -- GLOBAL FUNCTIONS --
+def if_admin():
+    """ Check to see if user in session is "admin" """
+    admin = user_find()['admin']
+    return admin
+
+
 def user_find():
     """
     Get the current user using the username value of the current session
@@ -40,6 +46,21 @@ def id_find():
 
 # Decorators explained
 # https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required
+def admin_required(function):
+    """
+    Decorator function that uses the if_admin() function above. Ensures
+    that a user is has admin privileges to access the wrapped function.
+    """
+    @wraps(function)
+    def wrap(*args, **kwargs):
+        if if_admin():
+            return function(*args, **kwargs)
+        else:
+            flash("You do not have admin privileges")
+            return redirect(url_for('home'))
+    return wrap
+
+
 def login_required(function):
     """
     Decorator function ensuring that user is in session before accessing the
