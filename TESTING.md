@@ -120,6 +120,18 @@ Code validated using https://jshint.com/ .
 
 ---
 
+- After implementing pagination on the "recipes" page, the following error occured after doing a query:
+
+![UndefinedError](docs/testing/images/pagination1.png)
+
+> This was resolved by declaring "recipes_paginated" and "pagination" in the search funtion as well. At first this seemd to work. However when clicking on the button to go to the second page of when a query delivered more than 8 results, the following error came up:
+
+![UndefinedError](docs/testing/images/pagination2.png)
+
+>
+
+---
+
 [Back to the top](#testing)
 
 
