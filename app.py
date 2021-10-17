@@ -141,6 +141,7 @@ def login():
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
+@login_required
 def profile(username):
     """ Render profile page based on logged in session user """
     username = mongo.db.users.find_one(
@@ -152,6 +153,7 @@ def profile(username):
 
 
 @app.route("/logout")
+@login_required
 def logout():
     """ Remove session cookies from user """
     flash("Logged out Successfully")
@@ -160,6 +162,7 @@ def logout():
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
+@login_required
 def add_recipe():
     """ Insert new recipe to database """
     if request.method == "POST":
@@ -184,6 +187,7 @@ def add_recipe():
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@login_required
 def edit_recipe(recipe_id):
     """ Update recipe record in database """
     if request.method == "POST":
@@ -210,6 +214,7 @@ def edit_recipe(recipe_id):
 
 
 @app.route("/delete_recipe/<recipe_id>")
+@login_required
 def delete_recipe(recipe_id):
     """ Remove recipe record from database, based on recipe_id """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
