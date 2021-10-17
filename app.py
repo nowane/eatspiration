@@ -1,4 +1,5 @@
 import os
+from functools import wraps
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -35,6 +36,25 @@ def id_find():
     """
     user_id = str(user_find()['_id'])
     return user_id
+
+
+# Decorators explained
+# https://pythonprogramming.net/decorator-wrappers-flask-tutorial-login-required
+def login_required(function):
+    """
+    Decorator function ensuring that user is in session before accessing the
+    wrapped function.
+    """
+    @wraps(function)
+    def wrap(*args, **kwargs):
+        if 'user' in session:
+            return function(*args, **kwargs)
+        else:
+            flash("You need to login first")
+            return redirect(url_for('login'))
+    return wrap
+
+# ------
 
 
 @app.route("/")
