@@ -1,9 +1,13 @@
+"""
+Defines server code. Flask initialisation,
+database interface and server routes.
+"""
 import os
 from functools import wraps
+from flask_paginate import Pagination, get_page_args
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -66,6 +70,32 @@ def admin_required(function):
     return wrap
 
 
+# -- PAGINATION --
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+def paginated(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
+
+
 def login_required(function):
     """
     Decorator function ensuring that user is in session before accessing the
@@ -95,32 +125,6 @@ def not_logged_in(function):
 # ------
 
 
-# Pagination
-# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
-def paginated(recipes):
-    """
-    Set pagination for pages with too much content for a single page
-    """
-    page, per_page, offset = get_page_args(
-                            page_parameter='page',
-                            per_page_parameter='per_page')
-    offset = page * PER_PAGE - PER_PAGE
-
-    return recipes[offset: offset + PER_PAGE]
-
-
-def pagination_args(recipes):
-    """
-    Set pagination for pages with too much content for a single page
-    """
-    page, per_page, offset = get_page_args(
-                            page_parameter='page',
-                            per_page_parameter='per_page')
-    total = len(recipes)
-
-    return Pagination(page=page, per_page=PER_PAGE, total=total)
-
-
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -135,14 +139,42 @@ def get_recipes():
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
-    """ Build query function to show the search page and results """
-    query = request.form.get("query")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    """ Function to submit query to database to find request """
+    query_input = {}
+    form_query = []
+
+    if request.method == "POST":
+        # Construct the search query_input with {key: value}
+        if "query" in request.form and request.form["query"]:
+            query_input["$text"] = {
+                "$search": request.form["query"],
+                "$caseSensitive": False,
+            }
+            form_query.append({
+                "key": "query",
+                "value": request.form["query"]
+            })
+
+        if "recipe_name" in request.form and request.form["recipe_name"]:
+            query_input["recipe_name"] = request.form["recipe_name"]
+            form_query.append({
+                "key": "recipe_name",
+                "value": request.form["recipe_name"]
+            })
+
+        if "cuisine_type" in request.form and request.form["cuisine_type"]:
+            query_input["cuisine_type"] = request.form["cuisine_type"]
+            form_query.append({
+                "key": "cuisine_type",
+                "value": request.form["cuisine_type"]
+            })
+
+    recipes = list(mongo.db.recipes.find(query_input).sort("cuisine_type", 1))
+    cuisines = mongo.db.cuisines.find()
     recipes_paginated = paginated(recipes)
     pagination = pagination_args(recipes)
-    return render_template("recipes.html",
-                           recipes=recipes_paginated,
-                           pagination=pagination)
+    return render_template("recipes.html", recipes=recipes_paginated,
+                           cuisines=cuisines, pagination=pagination)
 
 
 @app.route("/register", methods=["GET", "POST"])
