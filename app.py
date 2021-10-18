@@ -1,13 +1,13 @@
 """
-Defines server code. Flask initialisation,
+Defines server code, Flask initialisation,
 database interface and server routes.
 """
 import os
 from functools import wraps
-from flask_paginate import Pagination, get_page_args
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
+from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -180,7 +180,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 @not_logged_in
 def register():
-    """ Insert new user into db """
+    """ Insert new user into database """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -209,7 +209,10 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 @not_logged_in
 def login():
-    """ Log in existing user and redirect to custom profile view"""
+    """
+    Log in function to log in existing user
+    and direct them to custom profile view
+    """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -326,7 +329,7 @@ def get_cuisines():
 @admin_required
 def add_cuisine():
     """
-    Allows admin to add a new cuisine in the DB.
+    Allows admin to add a new cuisine type in the database.
     Check whether a cuisine with the same name already exist before
     saving new cuisine.
     """
@@ -357,7 +360,7 @@ def add_cuisine():
 @app.route("/edit_cuisine/<cuisine_id>", methods=["GET", "POST"])
 @admin_required
 def edit_cuisine(cuisine_id):
-    """ Allows admin user to edit existing cuisine data in the database. """
+    """ Allows admin user to edit existing cuisine data into the database. """
     if request.method == "POST":
         submit = {
             "cuisine_type": request.form.get("cuisine_type"),
