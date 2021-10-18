@@ -128,7 +128,7 @@ Code validated using https://jshint.com/ .
 
 ![UndefinedError](docs/testing/images/pagination2.png)
 
->
+> This was solved by rewriting the search function, using $text-operators. I found the solution on the way to go at [StackOverflow](https://stackoverflow.com/questions/64214477/how-i-can-solve-this-problem-pymongo-errors-operationfailure).
 
 ---
 
