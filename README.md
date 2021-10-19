@@ -149,10 +149,15 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
 ## Features
 
+### Features implemented
 <details>
-<summary><b>Features implemented</b></summary>
+<summary><b>Navigation</b></summary>
 
-
+- A navigation bar fixed at the top of each page which always keeps being displayed when the user scrolls. It displays links depending on wether the user is logged in or out, as well as the site name at the top-left side.
+- Navigation buttons with associated information displayed in the navigation bar so that the user can navigate the site easily, including a "registration" and "login" option.
+- A search field to allow first time visitors or logged in users to search for specific keywords for "recipe name" or it's "type of cuisine".
+- A user 'Profile' page which will feature the recipes uploaded by the user so they can navigate to them directly.
+- A footer at the bottom of the website, with the menu items links in them, as well as social media links.
 
 </details>
 
