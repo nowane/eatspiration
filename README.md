@@ -206,6 +206,10 @@ Update database:
 
 ---
 
+Recipe view:
+------------------------------------------------ TO DO -----------------------------------
+
+
 </details>
 
 ---
@@ -254,8 +258,10 @@ Update database:
 <summary><b>Libraries</b></summary>
 
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used micro-web framework to simplify web server tasks.
+- [Font Awesome](https://fontawesome.com/)
+* [Google Fonts](https://fonts.google.com/)
 - [JQuery](https://jquery.com/) - Used to simplify DOM manipulation.
-- [Materialize](https://materializecss.com/) - Used framework for this project.
+- [Materialize v1.0.0](https://materializecss.com/) - Used framework for this project.
 - [Werkzeug](https://palletsprojects.com/p/werkzeug/) - Used the Werkzeug WSGI library to manage the Web Server Gateway Interface and related tasks.
 
 </details>
@@ -278,7 +284,10 @@ Update database:
 <summary><b>Other technologies</b></summary>
 
 - [Balsamiq](https://balsamiq.com/) - Used to create wireframes for the UX stage of the project.
+- [DBdiagram](https://dbdiagram.io/) - Flowchart and database design illustration.
+- [Favicon](https://favicon.io/) - for generating 32x32 favicon.
 - [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - Used throughout building the project testing responsiveness and debugging.
+- [MongoDB](https://www.mongodb.com/) - database technology used for this project.
 - [Slack](https://slack.com/intl/en-nl/) - Used to look up answers to all kind of questions.
 
 </details>
