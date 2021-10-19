@@ -70,32 +70,6 @@ def admin_required(function):
     return wrap
 
 
-# -- PAGINATION --
-# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
-def paginated(recipes):
-    """
-    Set pagination for pages with too much content for a single page
-    """
-    page, per_page, offset = get_page_args(
-                            page_parameter='page',
-                            per_page_parameter='per_page')
-    offset = page * PER_PAGE - PER_PAGE
-
-    return recipes[offset: offset + PER_PAGE]
-
-
-def pagination_args(recipes):
-    """
-    Set pagination for pages with too much content for a single page
-    """
-    page, per_page, offset = get_page_args(
-                            page_parameter='page',
-                            per_page_parameter='per_page')
-    total = len(recipes)
-
-    return Pagination(page=page, per_page=PER_PAGE, total=total)
-
-
 def login_required(function):
     """
     Decorator function ensuring that user is in session before accessing the
@@ -121,6 +95,32 @@ def not_logged_in(function):
         flash("You are logged in!")
         return redirect(url_for("get_recipes"))
     return wrap
+
+
+# -- PAGINATION --
+# https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9
+def paginated(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    offset = page * PER_PAGE - PER_PAGE
+
+    return recipes[offset: offset + PER_PAGE]
+
+
+def pagination_args(recipes):
+    """
+    Set pagination for pages with too much content for a single page
+    """
+    page, per_page, offset = get_page_args(
+                            page_parameter='page',
+                            per_page_parameter='per_page')
+    total = len(recipes)
+
+    return Pagination(page=page, per_page=PER_PAGE, total=total)
 
 # ------
 
