@@ -33,7 +33,7 @@
                             <span class="card-title">{{ recipe.recipe_name }}</span>
                             <span>Servings: {{ recipe.servings }} person</span><br>
                             <span>Prep time: {{ recipe.prep_time }} min</span><br>
-                            {% if session.user|lower == recipe.username|lower %}
+                            {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
                                 <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small">Delete Recipe</a>
                                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit Recipe</a>
                             {% endif %}
