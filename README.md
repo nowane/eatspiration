@@ -259,7 +259,7 @@ Recipe view:
 
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used micro-web framework to simplify web server tasks.
 - [Font Awesome](https://fontawesome.com/)
-* [Google Fonts](https://fonts.google.com/)
+- [Google Fonts](https://fonts.google.com/)
 - [JQuery](https://jquery.com/) - Used to simplify DOM manipulation.
 - [Materialize v1.0.0](https://materializecss.com/) - Used framework for this project.
 - [Werkzeug](https://palletsprojects.com/p/werkzeug/) - Used the Werkzeug WSGI library to manage the Web Server Gateway Interface and related tasks.
