@@ -185,6 +185,13 @@ The registeration function requires that the password is entered twice. A jQuery
 Update database:
 - The database generated document id's are used to reference relationships between documents from different collections within the database. This ensures that whenever information changes within a recipe (recipe_name, cuisine_type, description etc. ) that the front end will display the updated details automatically.
 
+Delete Category:
+- A recipe must have a cuisine type. Whenever the admin deleted a specific cuisine, a recipe with that cuisine type will default back to the first choice alphabetically (A).
+
+
+Delete Recipe:
+- Anything that reference the deleted recipe are also removed in the same delete action.
+
 
 
 
