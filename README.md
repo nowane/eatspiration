@@ -179,10 +179,24 @@ The registeration function requires that the password is entered twice. A jQuery
 
 ---
 
+<details>
+<summary><b>Managing data</b></summary>
 
+Update database:
+- The database generated document id's are used to reference relationships between documents from different collections within the database. This ensures that whenever information changes within a recipe (recipe_name, cuisine_type, description etc. ) that the front end will display the updated details automatically.
+
+
+
+
+
+</details>
+
+---
+
+### Future features
 
 <details>
-<summary><b>Future features</b></summary>
+<summary><b>        </b></summary>
 
 
 
