@@ -185,16 +185,26 @@ The registeration function requires that the password is entered twice. A jQuery
 Update database:
 - The database generated document id's are used to reference relationships between documents from different collections within the database. This ensures that whenever information changes within a recipe (recipe_name, cuisine_type, description etc. ) that the front end will display the updated details automatically.
 
-Delete Category:
+---
+
+"Delete" Category:
 - A recipe must have a cuisine type. Whenever the admin deleted a specific cuisine, a recipe with that cuisine type will default back to the first choice alphabetically (A).
 
+---
 
-Delete Recipe:
-- Anything that reference the deleted recipe are also removed in the same delete action.
+"Delete" Recipe:
+- Anything that references to the deleted recipe is also removed in the same delete action.
 
+---
 
+"Add" or "Edit" recipes:
+- The image input requests an URL of the b the user uploaded image to be added with the recipe.
+- The cuisine type collapsible is a list in alphabetical order of which the user can choose the correct match for the dish.
+- Preperation steps and ingredients are added using the "add ingredient" and "add preperation step" buttons. Unlimited additional input fields for additional ingredients and instructions are allowed, however once they are added they are required. Empty fielde can't be submitted, so unnecessary fields of either two would have to be deleted first with the thrash icon next to the field.
+- When editing a recipe, all ingredient and preperation step fields are displayed with a thrash icon next to it, and so all can be deleted if required.
+- The remaining fields ("recipe name", "servings", "cooking time', "preperation time" and "description") have got accompanying helper-text and are self-explanatory.
 
-
+---
 
 </details>
 
