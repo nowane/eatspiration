@@ -164,6 +164,24 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 ---
 
 <details>
+<summary><b>Security</b></summary>
+
+The following features help to maintain security so that manipulation of the URL will not allow users to access to restricted areas or other users' profiles or privileges:
+
+- The admin_required decorator function: Ensuring a user is "admin" before the user can gain access the admin's privileges.
+- The login_required decorator function: Ensuring a user is logged in to access the wrapped functions' features.
+- The not_logged_in decorator function: Ensuring a user is not logged in, before being able to access specific functions like being able to login or register.
+- The registration and login function check for duplicate usernames, to ensure that the same username cannot be used to create or update a profile.
+- Werkzeug security helpers 'generate_password_hash' and 'check_password_hash' used to hash the user password during registration.
+The registeration function requires that the password is entered twice. A jQuery function checks whether the conformation password matches the initial password, and displays a message accordingly.
+
+</details>
+
+---
+
+
+
+<details>
 <summary><b>Future features</b></summary>
 
 
