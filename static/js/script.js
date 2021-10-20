@@ -3,6 +3,7 @@ $(document).ready(function () {
 		edge: "right"
 	});
 	$('select').formSelect();
+    $('.tabs').tabs();
 
 	// Tim Nelson's validation function from the task manager project
 	validateMaterializeSelect();
