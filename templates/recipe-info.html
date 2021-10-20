@@ -41,7 +41,7 @@
             </div>
 
             <div class="row">
-                <div class="col s12 l8 offset-l2">
+                <div class="col s12">
                     <ul class="tabs">
                         <li class="tab col s6">
                             <a href="#ingredients" class="active">Ingredients</a>
@@ -51,7 +51,7 @@
                         </li>
                     </ul>
                 </div>
-                <div id="ingredients" class="col s12 l8 offset-l2">
+                <div id="ingredients" class="col s12">
                     {% if recipe.ingredients|length > 0 %}
                     <ul class="collection">
                         {% for ingredient in recipe.ingredients %}
@@ -65,7 +65,7 @@
                     </ul>
                     {% endif %}
                 </div>
-                <div id="prep_steps" class="col s12 l8 offset-l2">
+                <div id="prep_steps" class="col s12">
                     {% if recipe.prep_steps|length > 0 %}
                     <ul class="collection">
                         {% for prep_step in recipe.prep_steps %}
