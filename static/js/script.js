@@ -4,6 +4,7 @@ $(document).ready(function () {
 	});
 	$('select').formSelect();
     $('.tabs').tabs();
+    $('.modal').modal();
 
 	// Tim Nelson's validation function from the task manager project
 	validateMaterializeSelect();

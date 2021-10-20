@@ -332,7 +332,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     """ Remove recipe record from database, based on recipe_id """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe Deleted")
+    flash("Recipe Successfully Deleted")
     return redirect(url_for("get_recipes"))
 
 
