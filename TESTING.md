@@ -71,6 +71,17 @@ Code validated using https://jshint.com/ .
 
   ## Testing as the site owner
 
+- As the owner/admin of the website, I want to be able to edit content to ensure it is conform the rules of the website.
+> If the admin is logged in, in the recipe overview the cards show both an edit and a delete button, for whenever a foul entry is found. In a future version the admin will be able to edit comments/reviews as well.
+
+- As the owner/admin of the website, I want the users of the website to have a positive user experience so that the community grows.
+> When the user enters the site, a page is showing recipes so the user can straight away dive in for inspiration. The navigation bar and footer clearly show options for the user to register or login if wanted as well.
+
+- As the owner/admin of the website, I want the users to be able to easily find, add, edit and be able to delete (their own) recipes to increase the number of recipes that are shared between users of the website.
+> When the user enters the website, the first thing they'd see is a big search bar where they can (at the moment) search on either "recipe name" or "cuisine name". More search options are yet to be added.
+> Any recipe a user uploads, another user can find in the database, so sharing and finding net recipes is easy. An option to add personal favorites is yet to be added.  
+
+---
 
   ### Testing as a new user
 
