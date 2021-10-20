@@ -137,6 +137,24 @@ def get_recipes():
                            pagination=pagination)
 
 
+@app.route("/recipe-info/<recipe_id>")
+def recipe_info(recipe_id):
+    """
+    Display selected card on a seperate page with all
+    needed recipe information included
+    """
+    recipe_information = mongo.db.recipes.find_one(
+        {"_id": ObjectId(recipe_id)})
+
+    if recipe_information:
+
+        if login_required(recipe_info):
+
+            return render_template(
+                "recipe-info.html",
+                recipe=recipe_information)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     """ Function to submit query to database to find request """
