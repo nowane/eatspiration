@@ -79,7 +79,7 @@ Code validated using https://jshint.com/ .
 
 - As the owner/admin of the website, I want the users to be able to easily find, add, edit and be able to delete (their own) recipes to increase the number of recipes that are shared between users of the website.
 > When the user enters the website, the first thing they'd see is a big search bar where they can (at the moment) search on either "recipe name" or "cuisine name". More search options are yet to be added.
-> Any recipe a user uploads, another user can find in the database, so sharing and finding net recipes is easy. An option to add personal favorites is yet to be added.  
+> Any recipe a user uploads, another user can find in the database, so sharing and finding net recipes is easy. An option to add personal favourites is yet to be added.  
 
 ---
 
@@ -101,6 +101,28 @@ Code validated using https://jshint.com/ .
 
   ### Testing as a returning user
 
+- As a returning user, I want to be able to search recipes by name so that I can find specific dishes.
+> The user can search on recipe name in the search bar.
+
+- As a returning user, I want to be able to search recipes on cuisine type.
+> The user can search on cuisine typee in the search bar.
+
+- As a returning user, I want to be able to be able to filter recipes based on cooking time.
+> This is not yet implemented in this version, but more advanced search options will be added at a later time.
+
+- As a returning user, I want to be able to save my favourite recipes so that I can quickly find them again in the future.
+> At this point the user has not yet got the option to keep all recipes central at their profile page by adding them to favourites. This will be added in the next release.
+
+- As a returning user, I want to be able to easily add, edit or delete my own recipes.
+> The user can easily add, edit or delete their own recipes.
+
+- As a returning user, I want feedback from the website when I add, edit or delete my recipes to show that my input is successfully processed.
+> Whenever such an action is done, there will be a message at the top of the screen telling the user wether or not their input was successfully processed.
+
+- As a returning user, I want to be able to log out of the site when I am done using it.
+> The user can safely log out of the website when done browsing.
+
+---
 
 [Back to the top](#testing)
 
