@@ -85,7 +85,19 @@ Code validated using https://jshint.com/ .
 
   ### Testing as a new user
 
+- As a new user, I want the website to be easily accessible from browsers of mobile devices as well as desktop.
+> The website is fully responsive,and easy to navigate on devices of all sizes.
 
+- As a new user, I want to be able to easily see how to use the website, so I can start using the website effortlessly.
+> A new user can easily dive in already existing recipes to look for inspiration, as well as sign up easily by simply registering with a username and password. After registration and logging in, the user is in a position of starting to submit recipes as well.
+
+- As a new user, I want to be able to register with the site so that I can upload new recipes.
+> The user can easily register on the website.
+
+- As a newly registered user, I want to be able to log into my account so that I can access my recipes.
+> The user can at any given time access their recipes, by either just reading, editing er deleting them. At this point however, the user has not yet got the option to keep all recipes central at their profile page.
+
+---
 
   ### Testing as a returning user
 
