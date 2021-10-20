@@ -28,6 +28,15 @@ footer {
     font-size: 3rem !important;
 }
 
+/* Recipe Overview styling */
+h5 {
+    margin-top: -5px;
+}
+
+button, a {
+    margin: 5px;
+}
+
 /* Recipe Card styling */
 img {
     float: left;
