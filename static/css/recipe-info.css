@@ -1,2 +1,13 @@
 /* Recipe card styling */
 
+.font {
+    font-size: 1.2rem;;
+}
+
+.margin {
+    margin: 10px 0px;
+}
+
+.mt {
+    margin-top: 10px;
+}
