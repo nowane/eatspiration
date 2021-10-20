@@ -22,78 +22,79 @@
             <h6 class="header center-align mb">Description</h6>
             <p class="center-align">{{ recipe.description|capitalize }}<p>
 
-                    <div class="card-content center-align">
-                        <div class="row">
-
-                            <div class="col s12 m4 margin">
-                                <span class="font"><i class="fas fa-utensils prefix"></i> Servings:<br>
-                                    {{ recipe.servings }} person(s)</span>
-                            </div>
-
-                            <div class="col s12 m4 margin">
-                                <span class="font"><i class="far fa-clock prefix"></i> Prepping:<br>
-                                    {{ recipe.prep_time }}
-                                    minute(s)</span>
-                            </div>
-
-                            <div class="col s12 m4 margin">
-                                <span class="font"><i class="fas fa-hourglass-half prefix"></i> Cooking:<br>
-                                    {{ recipe.cook_time }} minute(s)</span>
-                            </div>
-
-                        </div>
+            <div class="card-content center-align">
+                <div class="row">
+                    <div class="col s12 m4 margin">
+                        <span class="font"><i class="fas fa-utensils prefix"></i> Servings:<br>
+                            {{ recipe.servings }} person(s)</span>
                     </div>
-                    <div class="card-action center-align">
-                        {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
-                        <button data-target="{{ recipe._id }}" class="btn-small modal-trigger" aria-label="delete recipe button">Delete Recipe
-                        </button>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit Recipe</a>
-                        {% endif %}
+                    <div class="col s12 m4 margin">
+                        <span class="font"><i class="far fa-clock prefix"></i> Prepping:<br>
+                            {{ recipe.prep_time }}
+                            minute(s)</span>
                     </div>
+                    <div class="col s12 m4 margin">
+                        <span class="font"><i class="fas fa-hourglass-half prefix"></i> Cooking:<br>
+                            {{ recipe.cook_time }} minute(s)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s12 l8 offset-l2">
+                    <ul class="tabs">
+                        <li class="tab col s6">
+                            <a href="#ingredients" class="active">Ingredients</a>
+                        </li>
+                        <li class="tab col s6">
+                            <a href="#prep_steps">Preparation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="ingredients" class="col s12 l8 offset-l2">
+                    {% if recipe.ingredients|length > 0 %}
+                    <ul class="collection">
+                        {% for ingredient in recipe.ingredients %}
+                        <li class="collection-item">
+                            <label>
+                                <input class="ingredient-prep-check" type="checkbox">
+                                <span class="ingredient-prep-text">{{ ingredient }}</span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+                <div id="prep_steps" class="col s12 l8 offset-l2">
+                    {% if recipe.prep_steps|length > 0 %}
+                    <ul class="collection">
+                        {% for prep_step in recipe.prep_steps %}
+                        <li class="collection-item">
+                            <label>
+                                <input class="ingredient-prep-check" type="checkbox">
+                                <span class="ingredient-prep-text">{{ prep_step }}</span>
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card-action center-align">
+                {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
+                <button data-target="{{ recipe._id }}" class="btn-small modal-trigger"
+                    aria-label="delete recipe button">Delete Recipe
+                </button>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit Recipe</a>
+                {% endif %}
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col s12 l8 offset-l2">
-        <ul class="tabs">
-            <li class="tab col s6">
-                <a href="#ingredients" class="active">Ingredients</a>
-            </li>
-            <li class="tab col s6">
-                <a href="#prep_steps">Preparation</a>
-            </li>
-        </ul>
-    </div>
-    <div id="ingredients" class="col s12 l8 offset-l2">
-        {% if recipe.ingredients|length > 0 %}
-        <ul class="collection">
-            {% for ingredient in recipe.ingredients %}
-            <li class="collection-item">
-                <label>
-                    <input class="ingredient-prep-check" type="checkbox">
-                    <span class="ingredient-prep-text">{{ ingredient }}</span>
-                </label>
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
-    <div id="prep_steps" class="col s12 l8 offset-l2">
-        {% if recipe.prep_steps|length > 0 %}
-        <ul class="collection">
-            {% for prep_step in recipe.prep_steps %}
-            <li class="collection-item">
-                <label>
-                    <input class="ingredient-prep-check" type="checkbox">
-                    <span class="ingredient-prep-text">{{ prep_step }}</span>
-                </label>
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
-</div>
+
 
 <div id="{{ recipe._id }}" class="modal">
     <div class="modal-content center-align">
@@ -101,11 +102,12 @@
         <p>Are you sure you want to delete <span class="special-text">{{ recipe.recipe_name }}</span> ?</p>
     </div>
     <div class="modal-footer">
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small modal-close " aria-label="confirm delete button">
-            Delete 
+        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small modal-close "
+            aria-label="confirm delete button">
+            Delete
         </a>
         <a href="#!" class="btn modal-close" aria-label="cancel delete button">
-            Cancel 
+            Cancel
         </a>
     </div>
 </div>
