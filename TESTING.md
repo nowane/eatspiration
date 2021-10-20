@@ -137,7 +137,7 @@ Code validated using https://jshint.com/ .
 
 ## Documentation of any open bugs 
 
-
+- When editing an recipe, the category sets itself to default.
 
 [Back to the top](#testing)
 
