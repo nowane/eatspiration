@@ -37,7 +37,12 @@ button, a {
     margin: 5px;
 }
 
-/* Recipe Card styling */
+/* Recipe overview styling */
+.row .col .card .card-content {
+    padding: 12px;
+}
+
+/* Recipe card styling */
 img {
     float: left;
     width:  100px;
