@@ -37,9 +37,9 @@
 
                             {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
                             <button data-target="{{ recipe._id }}" class="btn-small modal-trigger margin"
-                                aria-label="delete recipe button">Delete Recipe
+                                aria-label="delete recipe button">Delete
                             </button>
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small margin">Edit Recipe</a>
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small margin">Edit</a>
                             {% endif %}
                         </div>
                     </div>
