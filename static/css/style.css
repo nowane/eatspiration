@@ -28,9 +28,9 @@ footer {
     font-size: 3rem !important;
 }
 
-/* Recipe Overview styling */
 h5 {
-    margin-top: -5px;
+    margin: 0;
+    padding: 0;
 }
 
 button, a {
@@ -91,6 +91,14 @@ body {
 }
 
 
+
+@media only screen and (max-width: 400px) {
+    .btn-small {
+        font-size: 0.8rem;;
+        margin: 0 !important;
+        padding: 0.1rem;
+    }
+}
 
 @media only screen and (max-width: 300px) {
     .brand-logo {
