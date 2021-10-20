@@ -67,6 +67,17 @@ Code validated using https://jshint.com/ .
 
 ---
 
+### Python
+
+Code validated using https://jshint.com/ .
+
+![Validation]() 
+
+
+[Back to the top](#testing)
+
+---
+
 ## Testing of user stories.
 
   ## Testing as the site owner
@@ -182,7 +193,7 @@ Code validated using https://jshint.com/ .
 
 ## Documentation of any open bugs 
 
-- When editing an recipe, the category sets itself to default.
+- When editing a recipe, the category sets itself to default.
 
 [Back to the top](#testing)
 
