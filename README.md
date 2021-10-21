@@ -20,21 +20,53 @@ View live website [here](https://eatspiration.herokuapp.com/).
 - [Tradeoff table](#tradeoff-table)
 - [User experience -UX-](#user-experience--ux-)
   - [User stories](#user-stories)
+    - [As the site owner/admin](#as-the-site-owner/admin)
+    - [As a new user](#as-a-new-user)
+    - [As a returning user](#as-a-returning-user)
   - [Design](#design)
+    - [Colour scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Wireframes](#wireframes)
     - [Database design](#database-design)
+      - [Database diagram](#database-diagram)
+      - [Database information](#database-information)
 - [Features](#features)
+  - [Features implemented](#features-implemented)
+    - [Navigation](#navigation)
+    - [Security](#security)
+    - [Managing data](#managing-data)
+      - [Update database](#update-database)
+      - [Delete cuisine](#delete-cuisine)
+      - [Delete recipe:](#delete-recipe)
+      - [Add or edit recipes](#add-or-edit-recipes)
+      - [Recipe information](#recipe-information)
+    - [Future features](#future-features)
+    - [Features changed](#features-changed)
 - [Technologies](#technologies)
+  - [Languages](#languages)
+  - [Libraries and frameworks](#libraries-and-frameworks)
+  - [Version control, workspace, repository storage and deployment](#version-control,-workspace,-repository-storage-and-deployment)
+  - [Other technologies](#other-technologies)
 - [Testing](#testing)
 - [Deployment](#deployment)
+  - [Deploy to Heroku](#deploy-to-heroku)
+    - [Setup requirements](#setup-requirements)
+    - [Setup Procfile](#setup-procfile)
+  - [Heroku](#heroku)
+    - [Create a new Heroku application](#create-a-new-heroku-application)
+    - [Connecting to the GitHub repository](#connecting-to-the-github-repository)
+    - [Setup the Config Vars](#setup-the-config-vars)
+    - [Automatic deployment](#automatic-deployment)
+  - [Local development](#local-development)
+    - [Forking](#forking)
+    - [Making a local clone](#making-a-local-clone)
 - [Credits](#credits)
+  - [Credit cuisine pictures](#credit-cuisine-pictures)
 
 
 ---
 
 ## Tradeoff table
-
-<details>
-<summary><b>Show table</b></summary>
 
 Opportunity/Problem | Importance | Viability/Feasibility
 --------------------|------------|-----------
@@ -46,41 +78,35 @@ User being able to search for recipes based on various searching criteria | 5 | 
 User being able to rate other recipes | 5 | 3
 User can contact site owner/admin | 3 | 5
 
-</details>
-
-[Back to table of content](#Table-of-Content) 
+[Back to table of content](#table-of-content) 
 
 ---
 
 ## User Experience -UX-
 
-  ### User stories
+### User stories
 
-<details>
-<summary><b>As the site owner/admin</b></summary>
+  #### As the site owner/admin
 
 - As the owner/admin of the website, I want to be able to edit content to ensure it is conform the rules of the website.
 - As the owner/admin of the website, I want the users of the website to have a positive user experience so that the community grows.
 - As the owner/admin of the website, I want the users to be able to easily find, add, edit and be able to delete (their own) recipes to increase the number of recipes that are shared between users of the website.
 
-</details>
+[Back to table of content](#table-of-content) 
 
 ---
 
-<details>
-<summary><b>As a new user</b></summary>
+  #### As a new user
 
 - As a new user, I want the website to be easily accessible from browsers of mobile devices as well as desktop.
 - As a new user, I want to be able to easily see how to use the website, so I can start using the website effortlessly.
 - As a new user, I want to be able to register with the site so that I can upload new recipes.
 - As a newly registered user, I want to be able to log into my account so that I can access my recipes.
 
-</details>
+[Back to table of content](#table-of-content) 
 
 ---
-
-<details>
-<summary><b>As a returning user</b></summary>
+  #### As a returning user
 
 - As a returning user, I want to be able to search recipes by name so that I can find specific dishes.
 - As a returning user, I want to be able to search recipes on cuisine type.
@@ -90,68 +116,58 @@ User can contact site owner/admin | 3 | 5
 - As a returning user, I want feedback from the website when I add, edit or delete my recipes to show that my input is successfully processed.
 - As a returning user, I want to be able to log out of the site when I am done using it.
 
-</details>
-
-[Back to table of content](#Table-of-Content)
+[Back to table of content](#table-of-content) 
 
 ---
 
 ### Design
 
-<details>
-<summary><b>Colour scheme</b></summary>
+  #### Colour scheme
 
 ![Colour scheme](https://github.com/nowane/eatspiration/blob/main/static/images/ms3-colourpalette.png)
 
 [Back to table of content](#table-of-content)
 
-</details>
-
 ---
 
-<details>
-<summary><b>Typography</b></summary>
+  #### Typography
 
 The headers are in Roboto Slab with Roboto as backup lettertype, while the body text is in Roboto. Roboto Slab was chosen for the headers because it is bold and clear, while Roboto is easy to read and widely used on the web. Sans-serif will be the the backup in case neither one loads.
 
-</details>
-
 ---
 
-<details>
-<summary><b>Wireframes</b></summary>
+  #### Wireframes
 
 Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wireframes/wireframes-ms3.pdf) for desktop, tablet and mobile.
 
-</details>
-
 [Back to table of content](#table-of-content)
+
 
 #### Database design
 
-<details>
-<summary><b>Database diagram</b></summary>
+  ##### Database diagram
 
 
 
-</details>
+
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Database information</b></summary>
+  #### Database information
 
 
 
-</details>
+
+[Back to table of content](#table-of-content)
 
 ---
 
 ## Features
 
 ### Features implemented
-<details>
-<summary><b>Navigation</b></summary>
+
+  #### Navigation
 
 - A navigation bar fixed at the top of each page which always keeps being displayed when the user scrolls. It displays links depending on wether the user is logged in or out, as well as the site name at the top-left side.
 - Navigation buttons with associated information displayed in the navigation bar so that the user can navigate the site easily, including a "registration" and "login" option.
@@ -159,12 +175,11 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 - A user 'Profile' page which will feature the recipes uploaded by the user so they can navigate to them directly.
 - A footer at the bottom of the website, with the menu items links in them, as well as social media links.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Security</b></summary>
+  #### Security
 
 The following features help to maintain security so that manipulation of the URL will not allow users to access to restricted areas or other users' profiles or privileges:
 
@@ -175,58 +190,70 @@ The following features help to maintain security so that manipulation of the URL
 - Werkzeug security helpers 'generate_password_hash' and 'check_password_hash' used to hash the user password during registration.
 The registeration function requires that the password is entered twice. A jQuery function checks whether the conformation password matches the initial password, and displays a message accordingly.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Managing data</b></summary>
+  #### Managing data
 
-Update database:
+  ##### Update database
+
 - The database generated document id's are used to reference relationships between documents from different collections within the database. This ensures that whenever information changes within a recipe (recipe_name, cuisine_type, description etc. ) that the front end will display the updated details automatically.
 
+[Back to table of content](#table-of-content)
+
 ---
 
-"Delete" Category:
+  ##### Delete cuisine
+
 - A recipe must have a cuisine type. Whenever the admin deleted a specific cuisine, a recipe with that cuisine type will default back to the first choice alphabetically (A).
 
+[Back to table of content](#table-of-content)
+
 ---
 
-"Delete" Recipe:
+  ##### Delete Recipe
+
 - Anything that references to the deleted recipe is also removed in the same delete action.
 
+[Back to table of content](#table-of-content)
+
 ---
 
-"Add" or "Edit" recipes:
+  #####  Add or edit recipes
+
 - The image input requests an URL of the b the user uploaded image to be added with the recipe.
 - The cuisine type collapsible is a list in alphabetical order of which the user can choose the correct match for the dish.
 - Preperation steps and ingredients are added using the "add ingredient" and "add preperation step" buttons. Unlimited additional input fields for additional ingredients and instructions are allowed, however once they are added they are required. Empty fielde can't be submitted, so unnecessary fields of either two would have to be deleted first with the thrash icon next to the field.
 - When editing a recipe, all ingredient and preperation step fields are displayed with a thrash icon next to it, and so all can be deleted if required.
 - The remaining fields ("recipe name", "servings", "cooking time', "preperation time" and "description") have got accompanying helper-text and are self-explanatory.
 
+[Back to table of content](#table-of-content)
+
 ---
 
-Recipe view:
------------------------------------------------- TO DO -----------------------------------
+  ##### Recipe information
 
 
-</details>
+
+
+
+[Back to table of content](#table-of-content)
 
 ---
 
 ### Future features
 
-<details>
-<summary><b>        </b></summary>
 
 
+
+[Back to table of content](#table-of-content)
 
 </details>
 
 ---
 
-<details>
-<summary><b>Features changed</b></summary>
+### Features changed
 
 
 
@@ -238,8 +265,7 @@ Recipe view:
 
 ## Technologies
 
-<details>
-<summary><b>Languages</b></summary>
+  ### Languages
 
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Used to style and colour HTML as well as dynamic elements.
 
@@ -251,11 +277,11 @@ Recipe view:
 
 - [Python](https://www.python.org/) - Used for the backend server and to run queries to the database.
 
-</details>
+[Back to table of content](#table-of-content) 
 
 ---
-<details>
-<summary><b>Libraries</b></summary>
+
+  ### Libraries and frameworks
 
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/) - Used micro-web framework to simplify web server tasks.
 - [Font Awesome](https://fontawesome.com/)
@@ -264,24 +290,22 @@ Recipe view:
 - [Materialize v1.0.0](https://materializecss.com/) - Used framework for this project.
 - [Werkzeug](https://palletsprojects.com/p/werkzeug/) - Used the Werkzeug WSGI library to manage the Web Server Gateway Interface and related tasks.
 
-</details>
+[Back to table of content](#table-of-content) 
 
 ---
 
-<details>
-<summary><b>Version control, workspace, repository storage and deployment</b></summary>
+  ### Version control, workspace, repository storage and deployment
 
 - [Git](https://git-scm.com/) - Version control software used to commit and push code to the GitHub repository where the source code is stored.
 - [Gitpod](https://www.gitpod.io/) - Main workspace IDE (Integrated Development Environment).
 - [GitHub](https://github.com/) - Used to store the project repository and deploy the website via github pages.
 - [Heroku](https://www.heroku.com/platform) - Platform used to deploy this project.
 
-</details>
+[Back to table of content](#table-of-content) 
 
 ---
 
-<details>
-<summary><b>Other technologies</b></summary>
+  ### Other technologies
 
 - [Balsamiq](https://balsamiq.com/) - Used to create wireframes for the UX stage of the project.
 - [DBdiagram](https://dbdiagram.io/) - Flowchart and database design illustration.
@@ -290,20 +314,13 @@ Recipe view:
 - [MongoDB](https://www.mongodb.com/) - database technology used for this project.
 - [Slack](https://slack.com/intl/en-nl/) - Used to look up answers to all kind of questions.
 
-</details>
-
 [Back to table of content](#table-of-content)
 
 ---
 
 ## Testing
 
-<details>
-<summary><b>Open tab</b></summary>
-
 This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING.md)  contains all testing.
-
-</details>
 
 [Back to table of content](#table-of-content)
 
@@ -313,8 +330,7 @@ This [testing document](https://github.com/nowane/eatspiration/blob/main/TESTING
 
 ### Deploy to Heroku
 
-<details>
-<summary><b>Setup requirements</b></summary>
+  #### Setup requirements
 
 Make sure "requirements.txt" is always up to date.  
 Requirements.txt tells Heroku what resources are needed to run the app.
@@ -323,12 +339,11 @@ Requirements.txt tells Heroku what resources are needed to run the app.
 2.  Type the following: ```pip3 freeze --local > requirements.txt``` 
 3.  Push all changes to GitHub.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Setup Procfile</b></summary>
+  #### Setup Procfile
 
 Heroku looks for this Procfile to find out which file runs the app and how to run it.
 
@@ -337,14 +352,13 @@ Heroku looks for this Procfile to find out which file runs the app and how to ru
 3.  Open the Procfile and delete an empty line if there is one. It could potentially cause problems with Heroku.
 4.  Push the file to GitHub.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
 ### Heroku
 
-<details>
-<summary><b>Create a new Heroku application</b></summary>
+  #### Create a new Heroku application
 
 1.  Go to the Heroku Dashboard.
 2.  Click New.
@@ -354,12 +368,11 @@ Heroku looks for this Procfile to find out which file runs the app and how to ru
 6.  Select the region closest to you.
 7.  Click "create app".
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Connecting to the GitHub repository</b></summary>
+  #### Connecting to the GitHub repository
 
 You can connect in different ways, like via the Heroku Command Line Interface as explained on the Heroku site. It's simpler however to deploy the site from Github. This way you only need to push to GitHub.
 
@@ -367,12 +380,11 @@ You can connect in different ways, like via the Heroku Command Line Interface as
 2.  Make sure your GitHub ID is displayed and then enter the GitHub repository name "eatspiration" and click search.
 3.  Once it finds the repository, click connect, to connect to the repository.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Setup the Config Vars</b></summary>
+  #### Setup the Config Vars
 
 Because of the hidden environment variables inside the env file which are not available to Heroku, attempting to deploy at this stage would result in application errors. 
 
@@ -389,12 +401,11 @@ Add the Key-Value pairs as follows, without quotes:
 ```  
 **Note: you will get this information from the local copy of the env file.**
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Automatic Deployment</b></summary>
+  #### Automatic deployment
 
 Once the Config Vars has been entered you are ready for automatic deployment.
 
@@ -405,14 +416,13 @@ Once the Config Vars has been entered you are ready for automatic deployment.
 
 The project is now deployed.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
 ### Local development
 
-<details>
-<summary><b>Forking</b></summary>
+  #### Forking
 
 You can make a copy of the GitHub Repository by "forking" the original repository onto your own account, where changes can be made without affecting the original repository by taking the following steps: 
    
@@ -422,12 +432,11 @@ You can make a copy of the GitHub Repository by "forking" the original repositor
 4. This will create a copy in your personal repository.
 5. Once you're finished making changes, return to original repository and press "New Pull Request" to request your changes to be merged into the original project.
 
-</details>
+[Back to table of content](#table-of-content)
 
 ---
 
-<details>
-<summary><b>Making a Local Clone</b></summary>
+  #### Making a local clone
 
 1. Log in to [GitHub](https://github.com). 
 2. Locate the [GitHub repository](https://github.com/nowane/eatspiration).
@@ -444,16 +453,11 @@ You can make a copy of the GitHub Repository by "forking" the original repositor
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more information about cloning repositories. 
 
-</details>
-
 [Back to table of content](#table-of-content)
 
 ---
 
 ## Credits
-
-<details>
-<summary><b>Open tab</b></summary>
 
 - Looked at this [Youtube video](https://www.google.com/search?q=How+to+add+line+divider+for+menu+item&rlz=1C1VDKB_nlNL944NL944&sxsrf=AOaemvIWM2JneOlrQ8TRwr-0b7OJBRtxbw%3A1633248622660&ei=bmVZYczYJ4WQkwXQnIXoDg&ved=0ahUKEwjMx-6f5a3zAhUFyKQKHVBOAe0Q4dUDCA4&uact=5&oq=How+to+add+line+divider+for+menu+item&gs_lcp=Cgdnd3Mtd2l6EAMyBAgAEBNKBAhBGABQijVYijVg0DZoAHABeACAAXeIAXeSAQMwLjGYAQCgAQKgAQHAAQE&sclient=gws-wiz#kpvalbx=_2G5ZYebFPILksAehqJOgAw22) which is about vertical menu dividers 
 
@@ -461,9 +465,11 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [Materialize](https://materializecss.com/) documentation regarding a lot of different matters.
 
-</details>
+[Back to table of content](#table-of-content)
 
-### Cuisine pictures
+---
+
+  ### Credit cuisine pictures
 
 - American:[Kelly Visel](https://images.unsplash.com/photo-1602030638412-bb8dcc0bc8b0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1171&q=80)
 - Asian:[Trung Bui](https://images.unsplash.com/photo-1527997921830-de1cf1f9b430?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=907&q=80) 
@@ -481,6 +487,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - Vegan:[Sonny Mauricio](https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80)
 - Vegetarian:[Ralph (Ravi) Kayden](https://images.unsplash.com/photo-1599020792689-9fde458e7e17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1976&q=80)
 
-
-
 [Back to table of content](#table-of-content)
+
+---
