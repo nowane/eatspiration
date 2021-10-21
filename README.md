@@ -233,9 +233,16 @@ The registeration function requires that the password is entered twice. A jQuery
 
   ##### Recipe information
 
-
-
-
+The recipe card consists of information from different input fields, which is filled in by the user at the add_recipe page. The information inserted there is stored in three seperate collections in the eatspirations database at MongoDB The stored  information is as follows:
+  - An add image field, where the user can insert the URL of an uploaded image of their recipe.
+  - A field for the recipe name.
+  - The amount of servings their dish has (integers).
+  - A collection with predefined cuisine types.
+  - Preperation time (integers)
+  - Cooking time (integers).
+  - A description field.
+  - A button which when clicked, creates an input field for the used ingredients. There can be as many fields added as needed (array).
+  - A button which when clicked, creates an input field for the preperation steps of the dish. There can be as many fields added as needed (array).
 
 [Back to table of content](#table-of-content)
 
