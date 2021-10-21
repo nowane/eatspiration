@@ -62,6 +62,7 @@ Code validated using https://jshint.com/ .
 
 ![Validation](docs/testing/validation/jsvalidation.png)
 
+ES6 as used. Besides that the validator had trouble handling the jQuery  "$"  declaration sign.
 
 [Back to the top](#testing)
 
