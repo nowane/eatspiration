@@ -50,7 +50,7 @@ Code validated using https://validator.w3.org/ .
 
 Code validated using https://jigsaw.w3.org/css-validator/ .
 
-![Validation]()
+![Validation](docs/testing/images/validation/cssvalidation.png)
 
 [Back to the top](#testing)
 
