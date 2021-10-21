@@ -127,6 +127,25 @@ img {
     color: #6A7A00;
 }
 
+.btn-eat-red-cuis {
+    background-color: #BA1200;
+    color: #F4F6F6;
+}
+
+.btn-eat-red-cuis:hover {
+    background-color: #6A7A00;
+    color: #E9FA9E;
+}
+
+.btn-eat-red-del {
+    background-color: #BA1200;
+    color: #F4F6F6;
+}
+
+.btn-eat-red-del:hover {
+    background-color: #F3483F;
+    color: #E9FA9E;
+}
 
 
 

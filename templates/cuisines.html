@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_cuisine') }}" class="btn-large">
+        <a href="{{ url_for('add_cuisine') }}" class="btn-large btn-eat-red-cuis">
             Add Cuisine
         </a>
     </div>
@@ -23,10 +23,10 @@
                 </div>
                 <div class="card-action center-align">
                     {% if session.user|lower == "admin" %}
-                    <button data-target="{{ cuisine._id }}" class="btn-small modal-trigger" aria-label="delete cuisine">
+                    <button data-target="{{ cuisine._id }}" class="btn-small modal-trigger btn-eat-red-del" aria-label="delete cuisine">
                         Delete
                     </button>
-                    <a href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}" class="btn-small margin">Edit</a>
+                    <a href="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}" class="btn-small margin btn-eat-green-sub">Edit</a>
                     {% endif %}
                 </div>
             </div>
