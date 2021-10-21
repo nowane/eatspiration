@@ -83,10 +83,10 @@
 
             <div class="card-action center-align">
                 {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
-                <button data-target="{{ recipe._id }}" class="btn-small modal-trigger margin"
+                <button data-target="{{ recipe._id }}" class="btn-small modal-trigger margin btn-eat-red-del"
                     aria-label="delete recipe button">Delete Recipe
                 </button>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small margin">Edit Recipe</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small margin btn-eat-green-sub">Edit Recipe</a>
                 {% endif %}
             </div>
 
@@ -95,16 +95,16 @@
 </div>
 
 <div id="{{ recipe._id }}" class="modal">
-    <div class="modal-content center-align">
-        <h4>Confirm deletion</h4>
-        <p>Are you sure you want to delete <span class="special-text">{{ recipe.recipe_name }}</span> ?</p>
+    <div class="modal-content center-align grey-card">
+        <h4 class="red-text-eat">CONFIRM DELETION</h4>
+        <p class="red-text-eat">Are you sure you want to delete <span class="special-text">{{ recipe.recipe_name }}</span> ?</p>
     </div>
     <div class="modal-footer">
-        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small modal-close "
+        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-small modal-close btn-eat-red-del"
             aria-label="confirm delete button">
             Delete
         </a>
-        <a href="#!" class="btn modal-close" aria-label="cancel delete button">
+        <a href="#!" class="btn modal-close btn-eat-green-sub" aria-label="cancel delete button">
             Cancel
         </a>
     </div>

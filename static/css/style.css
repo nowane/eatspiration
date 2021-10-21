@@ -15,6 +15,9 @@ h6 {
     font-style: normal !important;
 }
 
+.red-text-eat {
+    color: #BA1200;
+}
 
 /* Navbar and footer backgroud colour*/
 header nav,
