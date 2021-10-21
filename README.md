@@ -41,7 +41,6 @@ View live website [here](https://eatspiration.herokuapp.com/).
       - [Add or edit recipes](#add-or-edit-recipes)
       - [Recipe information](#recipe-information)
     - [Future features](#future-features)
-    - [Features changed](#features-changed)
 - [Technologies](#technologies)
   - [Languages](#languages)
   - [Libraries and frameworks](#libraries-and-frameworks)
@@ -254,19 +253,6 @@ The registeration function requires that the password is entered twice. A jQuery
 - Giving the user the possibility to comment on the recipes of other users.
 - Advanced search filters, like filtering specifically on cuisine, rating, etc.
 - Potentially some day a forum about food, inspiration, opninions and such.
-
-
-[Back to table of content](#table-of-content)
-
-</details>
-
----
-
-### Features changed
-
-
-
-</details>
 
 [Back to table of content](#table-of-content)
 
