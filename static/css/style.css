@@ -19,7 +19,8 @@ h6 {
 /* Navbar and footer backgroud colour*/
 header nav,
 footer {
-    background-color: #5C8001 !important;
+    background-color: #6A7A00 !important;
+    color: #F5F5F5;
 }
 
 /* Navbar styling */
