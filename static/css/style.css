@@ -42,6 +42,10 @@ button, a {
     padding: 12px;
 }
 
+.card-image {
+    padding: 10px;
+}
+
 /* Recipe card styling */
 img {
     float: left;
