@@ -44,6 +44,10 @@ button, a {
 }
 
 /* Recipe overview styling */
+.search-div {
+    margin: 20px 0px;
+}
+
 .row .col .card .card-content {
     padding: 12px;
 }
