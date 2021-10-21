@@ -144,7 +144,7 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
   ##### Database diagram
 
-![Diagram](docs/static/images/dbdiagram.png/)
+![Diagram](static/images/dbdiagram.png/)
 
 
 [Back to table of content](#table-of-content)
