@@ -28,7 +28,8 @@ footer {
 
 /* Body background-color */
 body {
-    background-color: #E9FA9E;;
+    background-color: #E9FA9E;
+    ;
 }
 
 /* Navbar styling */
@@ -42,7 +43,8 @@ h5 {
     padding: 0;
 }
 
-button, a {
+button,
+a {
     margin: 5px;
 }
 
@@ -77,7 +79,7 @@ button, a {
 /* Recipe card styling */
 img {
     float: left;
-    width:  100px;
+    width: 100px;
     height: 200px;
     object-fit: cover;
 }
@@ -95,22 +97,22 @@ hr {
 
 .tabs-red .tab a {
     color: rgba(186, 18, 0, 0.5);
-  }
+}
 
 .tabs-red .tab a:hover {
     font-weight: bold;
     color: #BA1200
-  }
+}
 
 .tabs-red .tab a:focus.active,
 .tabs-red .tab a.active {
     color: #BA1200;
     font-weight: bold;
-  }
+}
 
 .tabs-red .indicator {
     background-color: #BA1200;
-  }
+}
 
 /* Buttons */
 .btn-eat-green-sub {
@@ -121,7 +123,7 @@ hr {
 
 .btn-eat-green-sub:hover {
     background-color: #E9FA9E;
-    color:#6A7A00;
+    color: #6A7A00;
 }
 
 .btn-spacing {
@@ -132,6 +134,7 @@ hr {
     background-color: #BA1200;
     color: #F4F6F6;
 }
+
 .btn-eat-red:hover {
     background-color: #E9FA9E;
     color: #6A7A00;
@@ -144,12 +147,13 @@ hr {
 
 .btn-eat-red-cuis:hover {
     background-color: #6A7A00;
-   color: #E9FA9E;
+    color: #E9FA9E;
 }
 
 .btn-eat-red-del {
     background-color: #BA1200;
     color: #F4F6F6;
+    font-weight: bold;
 }
 
 .btn-eat-red-del:hover {
@@ -230,7 +234,8 @@ footer div div div h5 {
 
 @media only screen and (max-width: 400px) {
     .btn-small {
-        font-size: 0.8rem;;
+        font-size: 0.8rem;
+        ;
         margin: 0 !important;
         padding: 0.1rem;
     }
