@@ -23,6 +23,11 @@ footer {
     color: #F5F5F5;
 }
 
+/* Body background-color */
+body {
+    background-color: #E9FA9E;;
+}
+
 /* Navbar styling */
 .brand-logo {
     margin-left: 1rem;
