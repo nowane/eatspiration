@@ -144,7 +144,7 @@ hr {
 
 .btn-eat-red-cuis:hover {
     background-color: #6A7A00;
-    color: #E9FA9E;
+   color: #E9FA9E;
 }
 
 .btn-eat-red-del {
@@ -165,7 +165,16 @@ hr {
 .fa-user-check,
 .fa-user,
 .fa-lock {
-    color: #6A7A00;;
+    color: #6A7A00;
+}
+
+/* Pagination */
+main div .pagination ul li a {
+    color: #BA1200;
+}
+
+main div .pagination ul .active {
+    background-color: #6A7A00;
 }
 
 /* Footer positioning */
