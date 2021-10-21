@@ -218,7 +218,7 @@ def register():
         })
 
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration successful!")
         return redirect(url_for("profile", username=session["user"]))
 
     return render_template("register.html")
@@ -244,11 +244,11 @@ def login():
                 return redirect(url_for(
                     "profile", username=session["user"]))
             else:
-                flash("The Username and Password do not match.")
+                flash("The username and password do not match..")
                 return redirect(url_for("login"))
 
         else:
-            flash("The Username and Password do not match.")
+            flash("The username and password do not match..")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -270,7 +270,7 @@ def profile(username):
 @login_required
 def logout():
     """ Remove session cookies from user """
-    flash("Logged out Successfully")
+    flash("Logged out successfully")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -293,7 +293,7 @@ def add_recipe():
             "username": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("Recipe Successfully Added")
+        flash("Recipe successfully added")
         return redirect(url_for("get_recipes"))
 
     cuisines = mongo.db.cuisines.find().sort("cuisine_type", 1)
@@ -318,7 +318,7 @@ def edit_recipe(recipe_id):
             "username": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, edit)
-        flash("Recipe Successfully Updated")
+        flash("Recipe successfully updated")
         return redirect(url_for("get_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -332,7 +332,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     """ Remove recipe record from database, based on recipe_id """
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe Successfully Deleted")
+    flash("Recipe successfully deleted")
     return redirect(url_for("get_recipes"))
 
 
@@ -358,7 +358,7 @@ def add_cuisine():
                 {"cuisine_type": request.form.get("cuisine_type").lower()})
 
             if existing_cuisine:
-                flash("Cuisine Already Exists")
+                flash("Cuisine already exists")
                 return redirect(url_for("add_cuisine"))
 
             cuisine = {
@@ -367,7 +367,7 @@ def add_cuisine():
             }
 
             mongo.db.cuisines.insert_one(cuisine)
-            flash("New Cuisine Added")
+            flash("New cuisine type added")
             return redirect(url_for("get_cuisines", username=session["user"]))
 
         return render_template("add_cuisine.html")
@@ -385,7 +385,7 @@ def edit_cuisine(cuisine_id):
             "image": request.form.get("image")
         }
         mongo.db.cuisines.update({"_id": ObjectId(cuisine_id)}, submit)
-        flash("Cuisine Successfully Updated")
+        flash("Cuisine successfully updated")
         return redirect(url_for("get_cuisines"))
 
     cuisine = mongo.db.cuisines.find_one({"_id": ObjectId(cuisine_id)})
@@ -397,7 +397,7 @@ def edit_cuisine(cuisine_id):
 def delete_cuisine(cuisine_id):
     """ Allows admin user to delete cuisine data from the database. """
     mongo.db.cuisines.remove({"_id": ObjectId(cuisine_id)})
-    flash("Cuisine Successfully Deleted")
+    flash("Cuisine successfully deleted")
     return redirect(url_for("get_cuisines"))
 
 

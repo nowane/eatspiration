@@ -47,6 +47,7 @@ button, a {
 .flash-message {
     line-height: 3;
     background-color: #F4F6F6;
+    color: #BA1200;
 }
 
 /* Recipe overview styling */
@@ -147,11 +148,16 @@ img {
     color: #E9FA9E;
 }
 
+/* Input fields and icons */
 .input-field .active {
     color: #BA1200 !important;
 }
 
-
+.fa-user-check,
+.fa-user,
+.fa-lock {
+    color: #6A7A00;;
+}
 
 /* Footer positioning */
 body {
