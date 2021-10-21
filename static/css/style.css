@@ -82,6 +82,12 @@ img {
     object-fit: cover;
 }
 
+hr {
+    color: #BA1200 !important;
+    background-color: #BA1200 !important;
+    height: 3px;
+}
+
 /* Tabs */
 .tabs {
     overflow: hidden;
