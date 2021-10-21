@@ -52,6 +52,10 @@ button, a {
     padding: 10px;
 }
 
+.grey-card {
+    background-color: #F4F6F6;
+}
+
 /* Recipe card styling */
 img {
     float: left;
