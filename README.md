@@ -101,7 +101,7 @@ User can contact site owner/admin | 3 | 5
 <details>
 <summary><b>Colour scheme</b></summary>
 
-![Colour scheme](https://github.com/nowane/eatspiration/blob/main/static/images/ms3colourpalette.png)
+![Colour scheme](https://github.com/nowane/eatspiration/blob/main/static/images/ms3-colourpalette.png)
 
 [Back to table of content](#table-of-content)
 
