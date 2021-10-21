@@ -3,7 +3,7 @@
 
 <h3 class="center-align">Edit Cuisine</h3>
 
-<div class="card">
+<div class="card grey-card">
     <form method="POST" action="{{ url_for('edit_cuisine', cuisine_id=cuisine._id) }}">
         <div class="row">
             <!-- URL of image -->
@@ -12,7 +12,7 @@
                 <label for="image">Add image URL</label>
             </div>
             <!-- Cuisine Title -->
-            <div class="input-field col s12 m4">
+            <div class="input-field col s12 m4 offset-m4">
                 <input id="cuisine_type" name="cuisine_type" minlength="3" maxlength="70" type="text"
                     pattern="^[A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*$" value="{{ cuisine.cuisine_type }}" class="validate" required>
                 <label for="cuisine_type">Cuisine Name</label>
