@@ -60,7 +60,7 @@ Code validated using https://jigsaw.w3.org/css-validator/ .
 
 Code validated using https://jshint.com/ .
 
-![Validation]() 
+![Validation](docs/testing/images/validation/jsvalidation.png)
 
 
 [Back to the top](#testing)
