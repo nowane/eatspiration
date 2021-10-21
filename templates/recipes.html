@@ -45,6 +45,24 @@
                         </div>
                     </div>
                 </div>
+                <div id="{{ recipe._id }}" class="modal grey-card">
+
+                    <div class="modal-content center-align">
+                        <h4 class="red-text-eat">CONFIRM DELETION</h4>
+                        <p class="red-text-eat">Are you sure you want to delete <span
+                                class="special-text">{{ recipe.recipe_name }}</span> ?</p>
+                    </div>
+        
+                    <div class="modal-footer grey-card">
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="btn modal-close button btn-eat-red-del" aria-label="confirm delete">
+                            Delete
+                        </a>
+                        <a href="#!" class="btn modal-close btn-eat-green-sub" aria-label="cancel delete button">
+                            Cancel
+                        </a>
+                    </div>
+                </div>
             {% endfor %}
         </div>
         
@@ -56,7 +74,5 @@
     <div class="center-align">
         {{ pagination.links }}
     </div>
-
-    
 
 {% endblock %}

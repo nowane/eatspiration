@@ -34,19 +34,20 @@
 
         <!-- Deletion modal -->
         
-        <div id="{{ cuisine._id }}" class="modal">
+        <div id="{{ cuisine._id }}" class="modal grey-card">
 
-            <div class="modal-content">
-                <h4>Confirm deletion</h4>
-                <p>Are you sure you want to delete <span class="special-text">{{ cuisine.cuisine_type }}</span> ?</p>
+            <div class="modal-content center-align">
+                <h4 class="red-text-eat">CONFIRM DELETION</h4>
+                <p class="red-text-eat">Are you sure you want to delete <span
+                        class="special-text">{{ cuisine.cuisine_type }}</span> ?</p>
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer grey-card">
                 <a href="{{ url_for('delete_cuisine', cuisine_id=cuisine._id) }}"
-                class="btn modal-close" aria-label="confirm delete button">
+                    class="btn modal-close button btn-eat-red-del" aria-label="confirm delete">
                     Delete
                 </a>
-                <a href="#!" class="btn modal-close" aria-label="cancel delete button">
+                <a href="#!" class="btn modal-close btn-eat-green-sub" aria-label="cancel delete button">
                     Cancel
                 </a>
             </div>
