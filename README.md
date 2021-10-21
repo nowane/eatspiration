@@ -147,7 +147,7 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
   ##### Database diagram
 
-
+![]()
 
 
 [Back to table of content](#table-of-content)
@@ -244,7 +244,16 @@ The registeration function requires that the password is entered twice. A jQuery
 
 ### Future features
 
-
+- Declaring advanced admin functionality to a user as well as implementation of different user roles.
+- Giving the user the ability to request a new password whenever they have fotgotten their login credentials.
+- Recipe recommendation based on what the user has favourited.
+- Allow users to directly upload images instead of linking them with a URL.
+- Adding favourites as a user.
+- Favourites showing at the user profile.
+- A rating system.
+- Giving the user the possibility to comment on the recipes of other users.
+- Advanced search filters, like filtering specifically on cuisine, rating, etc.
+- Potentially some day a forum about food, inspiration, opninions and such.
 
 
 [Back to table of content](#table-of-content)
