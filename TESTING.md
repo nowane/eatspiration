@@ -188,6 +188,16 @@ Code validated using https://jshint.com/ .
 
 ---
 
+- When attempting to implement a modal as a defensive mechanism so the admin doesn't accidentally delete a cuisine type, the following jinja error occurred: 
+
+![UndefinedError](docs/testing/images/delete-cuisine1.png)
+
+![UndefinedError](docs/testing/images/delete-cuisine2.png)
+
+> Somehow the routing was wrong, so I changed whatever seemed to make sense at the time. Unfortunately I was unable to correct the error this way. Eventually I deleted the existing code and then rewrote it, after which it did work as intended.
+
+---
+
 [Back to the top](#testing)
 
 
