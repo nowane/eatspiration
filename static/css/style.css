@@ -147,6 +147,9 @@ img {
     color: #E9FA9E;
 }
 
+.input-field .active {
+    color: #BA1200 !important;
+}
 
 
 
