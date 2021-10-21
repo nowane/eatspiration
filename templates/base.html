@@ -81,7 +81,7 @@
                 {% if messages %}
                     {% for message in messages %}
                         <div class="row">
-                            <h4 class="center-align flash-message">{{ message }}</h4>
+                            <h4 class="center-align flash-message">{{ message|capitalize }}</h4>
                         </div>
                     {% endfor %}
                 {% endif %}
