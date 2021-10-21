@@ -67,9 +67,30 @@ img {
     height: 200px;
     object-fit: cover;
 }
+
+/* Tabs */
 .tabs {
     overflow: hidden;
 }
+
+.tabs-red .tab a {
+    color: rgba(186, 18, 0, 0.5);
+  }
+
+.tabs-red .tab a:hover {
+    font-weight: bold;
+    color: #BA1200
+  }
+
+.tabs-red .tab a:focus.active,
+.tabs-red .tab a.active {
+    color: #BA1200;
+    font-weight: bold;
+  }
+
+.tabs-red .indicator {
+    background-color: #BA1200;
+  }
 
 /* Footer positioning */
 body {
