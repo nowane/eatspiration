@@ -102,6 +102,35 @@ img {
     background-color: #BA1200;
   }
 
+/* Buttons */
+.btn-eat-green-sub {
+    background-color: #6A7A00;
+    color: #E9FA9E;
+    font-weight: bold;
+}
+
+.btn-eat-green-sub:hover {
+    background-color: #E9FA9E;
+    color:#6A7A00;
+}
+
+.btn-spacing {
+    margin-bottom: 20px;
+}
+
+.btn-eat-red {
+    background-color: #BA1200;
+    color: #F4F6F6;
+}
+.btn-eat-red:hover {
+    background-color: #E9FA9E;
+    color: #6A7A00;
+}
+
+
+
+
+
 /* Footer positioning */
 body {
     display: flex;
