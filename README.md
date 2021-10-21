@@ -29,7 +29,6 @@ View live website [here](https://eatspiration.herokuapp.com/).
     - [Wireframes](#wireframes)
     - [Database design](#database-design)
       - [Database diagram](#database-diagram)
-      - [Database information](#database-information)
 - [Features](#features)
   - [Features implemented](#features-implemented)
     - [Navigation](#navigation)
@@ -61,7 +60,6 @@ View live website [here](https://eatspiration.herokuapp.com/).
     - [Making a local clone](#making-a-local-clone)
 - [Credits](#credits)
   - [Credit cuisine pictures](#credit-cuisine-pictures)
-
 
 ---
 
@@ -146,16 +144,7 @@ Added [Wireframes](https://github.com/nowane/eatspiration/blob/main/docs/wirefra
 
   ##### Database diagram
 
-![]()
-
-
-[Back to table of content](#table-of-content)
-
----
-
-  #### Database information
-
-
+![Diagram](docs/static/images/dbdiagram.png/)
 
 
 [Back to table of content](#table-of-content)
@@ -243,6 +232,8 @@ The recipe card consists of information from different input fields, which is fi
   - A description field.
   - A button which when clicked, creates an input field for the used ingredients. There can be as many fields added as needed (array).
   - A button which when clicked, creates an input field for the preperation steps of the dish. There can be as many fields added as needed (array).
+
+  Whenever a user edits a recipe they have submitted earlier, the earlier stored information is still in place, so the user does not need to fill out the whole page again.
 
 [Back to table of content](#table-of-content)
 
