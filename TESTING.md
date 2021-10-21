@@ -50,7 +50,7 @@ Code validated using https://validator.w3.org/ .
 
 Code validated using https://jigsaw.w3.org/css-validator/ .
 
-![Validation](docs/testing/images/validation/cssvalidation.png)
+![Validation](docs/testing/validation/cssvalidation.png)
 
 [Back to the top](#testing)
 
@@ -60,7 +60,7 @@ Code validated using https://jigsaw.w3.org/css-validator/ .
 
 Code validated using https://jshint.com/ .
 
-![Validation](docs/testing/images/validation/jsvalidation.png)
+![Validation](docs/testing/validation/jsvalidation.png)
 
 
 [Back to the top](#testing)
