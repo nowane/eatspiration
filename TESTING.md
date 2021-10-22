@@ -37,6 +37,16 @@ A mockup of the project, displaying responsiveness.
 
 ![Mockup]()
 
+
+> This is the added score of the Google DevTools Lighthouse performance for desktop.
+
+![Lighthouse results desktop](docs/testing/images/lighthouse-desktop.png)
+
+
+> - This is the added score of the Google DevTools Lighthouse performance for mobile.
+
+![Lighthouse results desktop](docs/testing/images/lighthouse-mobile.png)
+
 [Back to table of content](#table-of-content)
 
 ---
