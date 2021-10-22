@@ -11,6 +11,8 @@ View live website [here](https://eatspiration.herokuapp.com/).
 
 ---
 
+A mockup of the project, displaying responsiveness.
+
 ![Mockup](docs/testing/images/amiresponsive.png)
 
 ---
