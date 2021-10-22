@@ -8,7 +8,9 @@
     - [HTML](#html)
     - [CSS](#css)
     - [Javascript](#javascript)
+    - [Python](#python)
 - [Testing of user stories](#testing-of-user-stories) 
+    - [Testing as the site owner](#testing-as-the-site-owner)
     - [Testing as a new user](#testing-as-a-new-user)
     - [Testing as a returning user](#testing-as-a-returning-user)
 - [Documentation of any bugs encountered and their resolution steps](#documentation-of-any-bugs-encountered-and-their-resolution-steps)
@@ -56,10 +58,14 @@ A mockup of the project, displaying responsiveness.
 
 ![Mockup]()
 
+[Back to table of content](#table-of-content)
+
 
 > This is the added score of the Google DevTools Lighthouse performance for desktop.
 
 ![Lighthouse results desktop](docs/testing/images/lighthouse-desktop.png)
+
+[Back to table of content](#table-of-content)
 
 
 > - This is the added score of the Google DevTools Lighthouse performance for mobile.
@@ -196,7 +202,9 @@ A mockup of the project, displaying responsiveness.
 
 [Back to table of content](#table-of-content)
 
+
 ---
+
 
 - The "Add Recipe"-page seemed to have issues with responsiveness when resizing via the "Toggle device toolbar". I thought this perhaps had something to do with Materialize and the fact using the "row" class sometimes gives extra whitespace, similar to how it affected the footer. See image below.
 
@@ -208,11 +216,15 @@ A mockup of the project, displaying responsiveness.
 
 [Back to table of content](#table-of-content)
 
+
 ---
+
 
 - At the "Edit Recipe" page there was an issue where whenever you changed data and submitted all was saved correctly. However when submitting the for whenever there were no changes deleted the preparation steps, which were inserted in a textarea element.
 
 > This was resolved by editing the input element of the preparation steps, which is now the same as the ingredients input.
+
+[Back to table of content](#table-of-content)
 
 ---
 
@@ -224,7 +236,9 @@ A mockup of the project, displaying responsiveness.
 
 [Back to table of content](#table-of-content)
 
+
 ---
+
 
 - After implementing pagination on the "recipes" page, the following error occured after doing a query:
 
@@ -238,7 +252,9 @@ A mockup of the project, displaying responsiveness.
 
 [Back to table of content](#table-of-content)
 
+
 ---
+
 
 - When attempting to implement a modal as a defensive mechanism so the admin doesn't accidentally delete a cuisine type, the following jinja error occurred: 
 
@@ -248,6 +264,10 @@ A mockup of the project, displaying responsiveness.
 
 > Somehow the routing was wrong, so I changed whatever seemed to make sense at the time. Unfortunately I was unable to correct the error this way. Eventually I deleted the existing code and then rewrote it, after which it did work as intended.
 
+[Back to table of content](#table-of-content)
+
+--- 
+
 - When editing a recipe, the category sets itself to default. Also when adding a recipe, at first the given category was not accepted.
 
 > Both bugs came form wrongly added  ```|capitalize ```  in the add_recipe option field. As listed below, these were removed.
@@ -255,6 +275,8 @@ A mockup of the project, displaying responsiveness.
 ![UndefinedError](docs/testing/images/cuisine-input.png)
 
 [Back to table of content](#table-of-content)
+
+---
 
 ## Documentation of any open bugs 
 
