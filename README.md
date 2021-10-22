@@ -39,6 +39,7 @@ View live website [here](https://eatspiration.herokuapp.com/).
       - [Delete recipe:](#delete-recipe)
       - [Add or edit recipes](#add-or-edit-recipes)
       - [Recipe information](#recipe-information)
+      - [Profile page](#profile-page)
     - [Future features](#future-features)
 - [Technologies](#technologies)
   - [Languages](#languages)
@@ -234,6 +235,14 @@ The recipe card consists of information from different input fields, which is fi
   - A button which when clicked, creates an input field for the preperation steps of the dish. There can be as many fields added as needed (array).
 
   Whenever a user edits a recipe they have submitted earlier, the earlier stored information is still in place, so the user does not need to fill out the whole page again.
+
+[Back to table of content](#table-of-content)
+
+  ##### Profile page
+
+- Displays the name of the session user.
+
+Beforehand it was intended to display the facourite recipes of a user, although I did not get this to work the way I wanted to. The only reason I have kept the page in at this point is because it might be of use to the owner/admin. Whenever that person is logged in and possibly is switching between accounts and in doubt about which account is being used at that point, clicking at the profile link will display the name of the user in session.
 
 [Back to table of content](#table-of-content)
 
