@@ -284,6 +284,14 @@ A mockup of the project, displaying responsiveness.
 
 - User added images do not contain an alt tag.
 
+- Validation of cuisine type works at the Gitpod environment, but not on Heroku. Images of this are below.
+
+Gitpod  
+![Gitpod-validate](docs/testing/images/gitpod-cuisine.png)
+
+Heroku  
+![Heroku-validate](docs/testing/images/heroku-cuisine.png)
+
 [Back to table of content](#table-of-content)
 
 [Back to README.md](https://github.com/nowane/eatspiration/blob/main/README.md)
