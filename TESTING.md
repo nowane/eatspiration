@@ -212,11 +212,15 @@ A mockup of the project, displaying responsiveness.
 
 > Somehow the routing was wrong, so I changed whatever seemed to make sense at the time. Unfortunately I was unable to correct the error this way. Eventually I deleted the existing code and then rewrote it, after which it did work as intended.
 
+- When editing a recipe, the category sets itself to default. Also when adding a recipe, at first the given category was not accepted.
+
+> Both bugs came form wrongly added  ```|capitalize ```  in the add_recipe option field. As listed below, these were removed.
+
+![UndefinedError](docs/testing/images/cuisine-input.png)
+
 [Back to table of content](#table-of-content)
 
 ## Documentation of any open bugs 
-
-- When editing a recipe, the category sets itself to default.
 
 - When adding an ingredient er preperation step, when the user tries to click at the input field this does not always work as intended. Clicking at the placeholder input text doesn't activate the input. The user has to click next to the placeholder text to be able to type in it.
 
