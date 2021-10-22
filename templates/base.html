@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <!-- For positioning footer to bottom -->
     <div class="content">
         <header>
             <div class="navbar-fixed">
@@ -54,12 +55,12 @@
                     </div>
                 </nav>
             </div>
+
             <!-- Mobile nav at the side of the screen -->
             <ul class="sidenav" id="mobile-demo">
                 <li>
                     <h3 class="center-align">Eatspiration</h3>
                 </li>
-                <hr>
                 <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile',username=session['user']) }}">Profile</a></li>
@@ -75,7 +76,7 @@
             </ul>
         </header>
 
-        <section>
+        <div>
             <!-- Flash messages -->
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
@@ -86,15 +87,14 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-        </section>
+        </div>
 
         <main class="container">
-
             {% block content %}
-
             {% endblock %}
-
         </main>
+
+    <!-- Closing content tag for footer positioning to the bottom -->
     </div>
 
     <!-- Footer -->

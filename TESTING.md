@@ -40,7 +40,7 @@ A mockup of the project, displaying responsiveness.
 
 Code validated using https://validator.w3.org/ .
 
-![Validation]()
+![Validation](docs/testing/validation/htmlvalidation.png)
 
 [Back to the top](#testing)
 
