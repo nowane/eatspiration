@@ -28,9 +28,9 @@
                     <option value="" disabled>Cuisine Type</option>
                     {% for cuisine in cuisines %}
                         {% if cuisine.cuisine_type == recipe.cuisine_type %}
-                            <option value="{{ cuisine.cuisine_type|capitalize }}" selected>{{ cuisine.cuisine_type|capitalize }}</option>
+                            <option value="{{ cuisine.cuisine_type }}" selected>{{ cuisine.cuisine_type|capitalize }}</option>
                         {% else %}
-                            <option value="{{ cuisine.cuisine_type|capitalize }}">{{ cuisine.cuisine_type|capitalize }}</option>
+                            <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type|capitalize }}</option>
                         {% endif %}
                     {% endfor %}
                 </select>

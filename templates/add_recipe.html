@@ -29,7 +29,7 @@
                 <select id="cuisine_type" name="cuisine_type" class="validate" required>
                     <option value="" disabled selected>Cuisine Type</option>
                     {% for cuisine in cuisines %}
-                    <option value="{{ cuisine.cuisine_type|capitalize }}">{{ cuisine.cuisine_type|capitalize }}</option>
+                    <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type|capitalize }}</option>
                     {% endfor %}
                 </select>
                 <label for="cuisine_type">Select Cuisine</label>
