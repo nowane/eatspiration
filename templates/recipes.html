@@ -33,7 +33,7 @@
                         </div>
                         <div class="card-content center-align">
                             <h5 class="header center-align">{{ recipe.recipe_name|capitalize }}</h5>
-                            <h6 class="header center-align"> {{ recipe.cuisine_type }}</h6>
+                            <h6 class="header center-align"> {{ recipe.cuisine_type|capitalize }}</h6>
                             <div class="card-action">
                                 {% if (session.user == recipe.username|lower) or (session.user|lower == "admin") %}
                                 <button data-target="{{ recipe._id }}" class="btn-small modal-trigger btn-eat-red-del"

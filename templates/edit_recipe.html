@@ -60,7 +60,7 @@
             <div class="input-field col s12">
                 <textarea id="description" name="description" minlength="10" maxlength="140"
                     class="materialize-textarea validate" required>
-                    {{- recipe.description -}}
+                    {{- recipe.description|capitalize -}}
                 </textarea>
                 <label for="description">Description</label>
                 <span class="helper-text">Description between 10 and 140 characters</span>
