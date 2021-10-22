@@ -218,6 +218,8 @@ A mockup of the project, displaying responsiveness.
 
 - When editing a recipe, the category sets itself to default.
 
+- When adding an ingredient er preperation step, when the user tries to click at the input field this does not always work as intended. Clicking at the placeholder input text doesn't activate the input. The user has to click next to the placeholder text to be able to type in it.
+
 [Back to table of content](#table-of-content)
 
 [Back to README.md](https://github.com/nowane/eatspiration/blob/main/README.md)
