@@ -61,6 +61,7 @@ View live website [here](https://eatspiration.herokuapp.com/).
     - [Making a local clone](#making-a-local-clone)
 - [Credits](#credits)
   - [Credit cuisine pictures](#credit-cuisine-pictures)
+  - [Credit recipes](#credit-recipes)
 
 ---
 
@@ -493,3 +494,27 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 [Back to table of content](#table-of-content)
 
 ---
+
+  ### Credit recipes
+
+- [www.allrecipes.com](https://www.allrecipes.com/recipe/36772/maple-banana-bread/) - Maple Banana Bread recipe.
+
+- [www.eatingeurope.com](https://www.eatingeurope.com/blog/stamppot-recipe/) - Recipe for Comfort Food: Stamppot.
+
+- [www.baking-sense.com](https://www.baking-sense.com/2020/03/26/boterkoek-dutch-butter-cake/) - Boterkoek – Dutch Butter Cake
+
+- [https://downshiftology.com](https://downshiftology.com/recipes/caprese-salad/) - Recipe for a caprese salad
+
+- [www.bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/english-garden-cocktail) - Recipe for English garden cocktail
+
+- [www.acouplecooks.com](https://www.acouplecooks.com/naturally-sweetened-whiskey-sour/) - Recipe for whiskey sour
+
+- [www.tasteofhome.com](https://www.tasteofhome.com/article/easy-pad-thai-recipe/) - Recipe for Pad Thai
+
+- [www.gall.nl](https://www.gall.nl/ontdek/cocktails/margarita/?gclid=CjwKCAjwwsmLBhACEiwANq-tXN8NJadN0AHzPbt8rhJN4v3al5pccwSqq7SZ10klI8b_Fy4f5J_n2xoCTL8QAvD_BwE) - How to make a margarita
+
+- [www.recipetineats.com](https://www.recipetineats.com/meatloaf-recipe/) - Recipe for meatloaf
+
+  [Back to table of content](#table-of-content)
+
+  ---
