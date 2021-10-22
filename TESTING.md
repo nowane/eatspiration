@@ -38,7 +38,7 @@ A mockup of the project, displaying responsiveness.
 
 ### HTML
 
-Code validated using https://validator.w3.org/ .
+> Code validated using https://validator.w3.org/ .
 
 ![Validation](docs/testing/validation/htmlvalidation.png)
 
@@ -48,7 +48,7 @@ Code validated using https://validator.w3.org/ .
 
 ### CSS
 
-Code validated using https://jigsaw.w3.org/css-validator/ .
+>Code validated using https://jigsaw.w3.org/css-validator/ .
 
 ![Validation](docs/testing/validation/cssvalidation.png)
 
@@ -58,11 +58,11 @@ Code validated using https://jigsaw.w3.org/css-validator/ .
 
 ### Javascript
 
-Code validated using https://jshint.com/ .
+> Code validated using https://jshint.com/ .
 
 ![Validation](docs/testing/validation/jsvalidation.png)
 
-ES6 as used. Besides that the validator had trouble handling the jQuery  "$"  declaration sign.
+> ES6 as used. Besides that the validator had trouble handling the jQuery  "$"  declaration sign.
 
 [Back to table of content](#table-of-content)
 
@@ -70,10 +70,15 @@ ES6 as used. Besides that the validator had trouble handling the jQuery  "$"  de
 
 ### Python
 
-Code validated using http://pep8online.com/ .
+> Code validated using http://pep8online.com/ .
 
 ![Validation](docs/testing/validation/pythonvalidation.png)
 
+![Validation](docs/testing/validation/pyerrors.png)
+
+> Unused-import: 'env' is the local file used to configure the development environment, as it is not pushed. Vecause it is in .gitignore, pylint incorrectly believes the function is not used.
+
+> Unbalanced-tuple-unpacking & unused-variable (per_page, offset): This relates to code used by flask-paginate to automate content pagination. The code was taken directly from their installation guide, changes to the code cause the site to fail on load.
 
 [Back to table of content](#table-of-content)
 
