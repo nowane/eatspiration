@@ -11,7 +11,7 @@ View live website [here](https://eatspiration.herokuapp.com/).
 
 ---
 
-![Mockup](/)
+![Mockup](docs/testing/images/amiresponsive.png)
 
 ---
 

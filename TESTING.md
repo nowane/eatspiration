@@ -56,7 +56,7 @@
 
 A mockup of the project, displaying responsiveness.
 
-![Mockup]()
+![Mockup](docs/testing/images/amiresponsive.png)
 
 [Back to table of content](#table-of-content)
 
