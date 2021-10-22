@@ -18,14 +18,33 @@
 
 ## Manual testing of each section of the site
 
-- Markdown links are tested and working.
+- All arkdown links are tested and working.
 
-- Buttons on the website are working.
+- All buttons on the website are working.
 
-- 404-page link gets the user back to index.html.
+- All links in the footer work as intended.
 
+- Routing of the website works as intended.
 
-GitHub icon links correctly.
+- Registration functionality works as intended.
+
+- Login functionality works as intended
+
+- Viewing of a single recipe works as intended.
+
+- Add recipe and cuisine functionality works as intended.
+
+- Edit recipe functionality works as intended.
+
+- Delete functionality of recipe and cuisine works as intended.
+
+- Deletion confirmation modals for recipe and cuisine work as intended.
+
+- Logout functionality works as intended.
+
+- 404-page link gets the user back to start page.
+
+- 500-page link gets the user back to start page.
 
 [Back to table of content](#table-of-content)
 
@@ -241,7 +260,7 @@ A mockup of the project, displaying responsiveness.
 
 - When adding an ingredient er preperation step, when the user tries to click at the input field this does not always work as intended. Clicking at the placeholder input text doesn't activate the input. The user has to click next to the placeholder text to be able to type in it.
 
-- User added images do not contaien an alt tag.
+- User added images do not contain an alt tag.
 
 [Back to table of content](#table-of-content)
 
