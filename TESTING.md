@@ -18,7 +18,14 @@
 
 ## Manual testing of each section of the site
 
+- Markdown links are tested and working.
 
+- Buttons on the website are working.
+
+- 404-page link gets the user back to index.html.
+
+
+GitHub icon links correctly.
 
 [Back to table of content](#table-of-content)
 
@@ -223,6 +230,8 @@ A mockup of the project, displaying responsiveness.
 ## Documentation of any open bugs 
 
 - When adding an ingredient er preperation step, when the user tries to click at the input field this does not always work as intended. Clicking at the placeholder input text doesn't activate the input. The user has to click next to the placeholder text to be able to type in it.
+
+- User added images do not contaien an alt tag.
 
 [Back to table of content](#table-of-content)
 
