@@ -64,6 +64,8 @@ A mockup of the project, displaying responsiveness.
 - [Credits](#credits)
   - [Credit cuisine pictures](#credit-cuisine-pictures)
   - [Credit recipes](#credit-recipes)
+  - [Acknowledgements](#acknowledgements)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -517,6 +519,22 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [www.recipetineats.com](https://www.recipetineats.com/meatloaf-recipe/) - Recipe for meatloaf
 
-  [Back to table of content](#table-of-content)
+[Back to table of content](#table-of-content)
 
   ---
+
+  ### Acknowledgements
+
+- Thanks to my mentor Aaron Sinnott for advice.
+- Thanks to my girlfriend for helping me find and add some recipes.
+- Thanks to the Slack community for being helpful, and their advice.
+
+[Back to table of content](#table-of-content)
+
+---
+
+## Disclaimer
+
+This site was developed for educational purposes.
+
+[Back to table of content](#table-of-content)
